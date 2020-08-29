@@ -25,6 +25,7 @@ export const Wrapper = styled.div`
 export const MainContainer = styled.div`
     background-color: #fff;
     grid-area: 4 / 2 / 5 / 5;
+    padding-bottom: 25px;
     @media (max-width: 1024px) {
         grid-area: 4 / 2 / 5 / 5;
     }
@@ -90,6 +91,19 @@ margin-top: 5vh;
     }
 `;
 export const ContactsStyles = styled.div `
+font-size: 1.5em;
+span {
+    font-weight: bold;
+}
+span:first-of-type {
+
+}
+p:first-of-type {
+    font-weight: bold;
+}
+p {
+    white-space: pre-line;
+}
 
 `
 export const Sidebar = styled.ul`

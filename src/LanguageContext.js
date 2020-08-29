@@ -18,7 +18,13 @@ export const languages = {
                 We offer metalworking in such material capabilities as steel, stainless steel, aluminium, copper, bronze, brass, plastic, and etc.
                 If You'd like to know more about what our company can do for You, please don't hesitate to contact us.`,
         },
-        contact: {},
+        contact: {
+            adress: 'Adress',
+            phone: 'Phone',
+            fax: 'Fax',
+            mail: 'Mail',
+            web: 'Web',
+        },
     },
     et: {
         menu: {
@@ -36,7 +42,13 @@ export const languages = {
             Valmistame tooteid üksiktellimusena kui ka suurte sarjadena vastavalt kliendi poolt ette antud joonistele.
             Meil on kogemus erinevate materjalide töötlemisel:  roostevaba teras, pronks, plastid, alumiinium jne.`,
         },
-        contact: {},
+        contact: {
+            adress: 'Aadress',
+            phone: 'Telefon',
+            fax: 'Faksimine',
+            mail: 'E-post',
+            web: 'Web',
+        },
     },
     ru: {
         menu: {
@@ -54,7 +66,13 @@ export const languages = {
             Valmistame tooteid üksiktellimusena kui ka suurte sarjadena vastavalt kliendi poolt ette antud joonistele.
             Meil on kogemus erinevate materjalide töötlemisel:  roostevaba teras, pronks, plastid, alumiinium jne.`,
         },
-        contact: {},
+        contact: {
+            adress: 'Адрес',
+            phone: 'Телефон',
+            fax: 'Факс',
+            mail: 'Почта',
+            web: 'Веб-сайт',
+        },
     },
 };
 
