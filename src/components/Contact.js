@@ -6,7 +6,7 @@ import { LocationPin } from './LocationPin';
 export const Contact = ({ data, setCurrentPage }) => {
     // eslint-disable-next-line
     useEffect(() => setCurrentPage(data.menu.contacts), [data.menu.contacts]);
-console.log(process.env.GOOGLE_API)
+
     const mapProps = {
         center: {
             lat: 58.268758,
@@ -33,7 +33,7 @@ console.log(process.env.GOOGLE_API)
             <div className="map">
                 <GoogleMapReact
                     bootstrapURLKeys={{
-                        key: process.env.GOOGLE_API,
+                        key: 'AIzaSyAblU3Umy0cY0Dq-WX6yXtXe4sTuqtGzHc',
                     }}
                     defaultCenter={mapProps.center}
                     defaultZoom={mapProps.zoom}
