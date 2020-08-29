@@ -1,13 +1,13 @@
 import React from 'react';
-import { Wrapper } from './styled-components';
 import './App.css';
 import { Menu } from './components/Menu';
+import { LanguageProvider } from './LanguageContext';
 
 function App() {
     return (
-        <>
+        <LanguageProvider>
             <Menu />
-        </>
+        </LanguageProvider>
     );
 }
 
