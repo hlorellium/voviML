@@ -6,7 +6,7 @@ import { LocationPin } from './LocationPin';
 export const Contact = ({ data, setCurrentPage }) => {
     // eslint-disable-next-line
     useEffect(() => setCurrentPage(data.menu.contacts), [data.menu.contacts]);
-
+console.log(process.env.GOOGLE_API)
     const mapProps = {
         center: {
             lat: 58.268758,
