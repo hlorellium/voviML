@@ -33,7 +33,7 @@ export const Contact = ({ data, setCurrentPage }) => {
             <div className="map">
                 <GoogleMapReact
                     bootstrapURLKeys={{
-                        key: 'AIzaSyAblU3Umy0cY0Dq-WX6yXtXe4sTuqtGzHc',
+                        key: process.env.GOOGLE_API,
                     }}
                     defaultCenter={mapProps.center}
                     defaultZoom={mapProps.zoom}
