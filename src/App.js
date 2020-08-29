@@ -14,7 +14,12 @@ function App() {
         <LanguageProvider>
             <Menu />
             <Router>
-                <Route path="/tools">
+                <Switch>
+                <Route path="*">
+            <Menu />
+          </Route>
+                </Switch>
+                {/* <Route path="/tools">
                     <Menu />
                 </Route>
                 <Route path="/gallery">
@@ -22,7 +27,7 @@ function App() {
                 </Route>
                 <Route path="/contacts">
                     <Menu />
-                </Route>
+                </Route> */}
             </Router>
         </LanguageProvider>
     );
