@@ -61,8 +61,6 @@ export const AboutStyles = styled.div`
             font-size: 1em;
         }
     }
-
-    
 `;
 export const ToolsStyles = styled.div`
     display: flex;
@@ -80,7 +78,7 @@ export const ToolsStyles = styled.div`
     }
 `;
 export const GalleryGrid = styled.div`
-margin-top: 5vh;
+    margin-top: 5vh;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(150px, 400px));
     grid-gap: 10px;
@@ -92,47 +90,48 @@ margin-top: 5vh;
         max-height: 100%;
     }
     @media (max-width: 1100px) {
-    grid-template-columns: repeat(auto-fill, minmax(200px, 300px));
+        grid-template-columns: repeat(auto-fill, minmax(200px, 300px));
     }
 `;
-export const ContactsStyles = styled.div `
-margin-top: 5vh;
-font-size: 1.5em;
-display: flex;
-div:first-of-type {
-    margin-right: 10%;
-}
-span {
-    font-weight: bold;
-}
-span:first-of-type {
-
-}
-p:first-of-type {
-    font-weight: bold;
-}
-p {
-    white-space: pre-line;
-}
-.map {
-    height: 50vh;
-     width: 50%;
-}
-.pin {
-    display: flex;
-}
-.pin-text {
+export const ContactsStyles = styled.div`
+    margin-top: 5vh;
     font-size: 1.5em;
-}
-@media (max-width: 1100px) {
-    flex-direction: column;
+    display: flex;
+    div:first-of-type {
+        margin-right: 10%;
+    }
+    span {
+        font-weight: bold;
+    }
+    span:first-of-type {
+    }
+    p:first-of-type {
+        font-weight: bold;
+    }
+    p {
+        white-space: pre-line;
+    }
     .map {
-        width: 100%;
-        height: 70vh;
+        height: 50vh;
+        width: 50%;
     }
+    .adress {
+        color: var(--blue);
     }
-
-`
+    .pin {
+        display: flex;
+    }
+    .pin-text {
+        font-size: 1.5em;
+    }
+    @media (max-width: 1100px) {
+        flex-direction: column;
+        .map {
+            width: 100%;
+            height: 70vh;
+        }
+    }
+`;
 export const Sidebar = styled.ul`
     grid-area: 2 / 2 / 4 / 3;
     display: flex;
@@ -159,7 +158,7 @@ export const LangSwitch = styled.div`
     grid-area: 1/2;
     display: flex;
     align-items: flex-end;
-
+    font-weight: bold;
     span {
         margin-right: 10px;
         cursor: pointer;

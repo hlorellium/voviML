@@ -19,7 +19,7 @@ export const Contact = ({ data, setCurrentPage }) => {
         <ContactsStyles>
             <div>
                 <h3>VoviML OÜ (reg.nr 10125228)</h3>
-                <span>{data.contact.adress}:</span>
+                <span className="adress">{data.contact.adress}:</span>
                 <p>Nõo, Lao 11A, Tartumaa 61601, Estonia </p>
                 <p>
                     {data.contact.phone}: <span>+37253450405</span> <br />{' '}
@@ -30,7 +30,7 @@ export const Contact = ({ data, setCurrentPage }) => {
                     {data.contact.web}: <span>www.voviml.eu</span>
                 </p>
             </div>
-            <div className='map'>
+            <div className="map">
                 <GoogleMapReact
                     bootstrapURLKeys={{
                         key: 'AIzaSyAblU3Umy0cY0Dq-WX6yXtXe4sTuqtGzHc',
@@ -38,7 +38,6 @@ export const Contact = ({ data, setCurrentPage }) => {
                     defaultCenter={mapProps.center}
                     defaultZoom={mapProps.zoom}
                 >
-                   
                     <LocationPin
                         lat={58.268758}
                         lng={26.521602}
