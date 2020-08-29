@@ -5,7 +5,7 @@ import {
     Route,
 } from 'react-router-dom';
 import './App.css';
-import { Menu } from './components/Menu';
+import { Menu } from './Menu';
 import { LanguageProvider } from './LanguageContext';
 
 function App() {
