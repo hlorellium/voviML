@@ -53,11 +53,16 @@ export const AboutStyles = styled.div`
     }
     p {
         font-size: 1.5em;
-        border-bottom: 1px solid var(--black);
-        padding-bottom: 30px;
         line-height: 1.6;
         white-space: pre-line;
     }
+    @media (max-width: 1100px) {
+        p {
+            font-size: 1em;
+        }
+    }
+
+    
 `;
 export const ToolsStyles = styled.div`
     display: flex;
@@ -91,7 +96,12 @@ margin-top: 5vh;
     }
 `;
 export const ContactsStyles = styled.div `
+margin-top: 5vh;
 font-size: 1.5em;
+display: flex;
+div:first-of-type {
+    margin-right: 10%;
+}
 span {
     font-weight: bold;
 }
@@ -104,6 +114,23 @@ p:first-of-type {
 p {
     white-space: pre-line;
 }
+.map {
+    height: 50vh;
+     width: 50%;
+}
+.pin {
+    display: flex;
+}
+.pin-text {
+    font-size: 1.5em;
+}
+@media (max-width: 1100px) {
+    flex-direction: column;
+    .map {
+        width: 100%;
+        height: 70vh;
+    }
+    }
 
 `
 export const Sidebar = styled.ul`

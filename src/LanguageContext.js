@@ -50,30 +50,6 @@ export const languages = {
             web: 'Web',
         },
     },
-    ru: {
-        menu: {
-            about: 'О компании',
-
-            tools: 'Станки',
-
-            gallery: 'Галерея',
-            contacts: 'Контакты',
-        },
-        about: {
-            welcome: 'Добро пожаловать!',
-            text: `Osaühing VoviML on asutatud septembris 1996.a. Tartus. Alates oktoober 2004.a.  on  põhitegevusalaks  metallitöötlemine.
-            Meie pikaaegsed kogemused metallitööde vallas lubavad oma  klientidele pakkuda kõrge täpsusega detaile kaasaegsetel  CNC-treimispingil.
-            Valmistame tooteid üksiktellimusena kui ka suurte sarjadena vastavalt kliendi poolt ette antud joonistele.
-            Meil on kogemus erinevate materjalide töötlemisel:  roostevaba teras, pronks, plastid, alumiinium jne.`,
-        },
-        contact: {
-            adress: 'Адрес',
-            phone: 'Телефон',
-            fax: 'Факс',
-            mail: 'Почта',
-            web: 'Веб-сайт',
-        },
-    },
 };
 
 export const LanguageContext = createContext({

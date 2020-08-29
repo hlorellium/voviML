@@ -67,17 +67,6 @@ export const Menu = () => {
                     >
                         ET
                     </span>
-                    <span
-                        onClick={() => {
-                            localStorage.setItem('currentLanguage', 'ru');
-                            setCurrentLanguage('ru');
-                        }}
-                        className={
-                            currentLanguage === 'ru' ? 'selectedLang' : ''
-                        }
-                    >
-                        RU
-                    </span>
                 </LangSwitch>
                 <Sidebar>
                     <li>
