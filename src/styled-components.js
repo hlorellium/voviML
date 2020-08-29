@@ -74,13 +74,24 @@ export const ToolsStyles = styled.div`
     }
 `;
 export const GalleryGrid = styled.div`
+margin-top: 5vh;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 400px));
+    grid-gap: 10px;
     max-width: 100%;
     overflow: hidden;
     img {
-        max-width: 300px;
-        height: 300px;
+        object-fit: cover;
+        width: 100%;
+        max-height: 100%;
+    }
+    @media (max-width: 1100px) {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 300px));
     }
 `;
+export const ContactsStyles = styled.div `
+
+`
 export const Sidebar = styled.ul`
     grid-area: 2 / 2 / 4 / 3;
     display: flex;
@@ -153,5 +164,4 @@ export const DarkBg = styled.div`
     grid-area: 3 / 1 / 3 / 6;
     background-color: rgba(11, 10, 10, 0.8);
     border-bottom: 1px solid var(--black);
-
 `;
