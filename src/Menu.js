@@ -41,7 +41,6 @@ export const Menu = () => {
     const [currentPage, setCurrentPage] = useState('');
 
     return (
-        <LanguageProvider>
             <Router>
                 <Wrapper>
                     <BlueBg />
@@ -124,6 +123,5 @@ export const Menu = () => {
                     </MainContainer>
                 </Wrapper>
             </Router>
-        </LanguageProvider>
     );
 };

@@ -1,11 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {Menu} from './Menu';
+import { Menu } from './Menu';
+import { LanguageProvider } from './LanguageContext';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <Menu />
-  </React.StrictMode>,
-  document.getElementById('root')
+    <React.StrictMode>
+        <LanguageProvider>
+            <Menu />
+        </LanguageProvider>
+    </React.StrictMode>,
+    document.getElementById('root')
 );
-
