@@ -6,7 +6,6 @@ import {
     NavLink,
 } from 'react-router-dom';
 import './App.css';
-import { LanguageProvider } from './LanguageContext';
 import { LanguageContext } from './LanguageContext';
 import { About } from './components/About';
 import { Tools } from './components/Tools';
