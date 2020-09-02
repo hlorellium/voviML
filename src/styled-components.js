@@ -83,7 +83,6 @@ export const GalleryGrid = styled.div`
     grid-template-columns: repeat(auto-fill, minmax(150px, 400px));
     grid-gap: 10px;
     max-width: 100%;
-    overflow: hidden;
     img {
         object-fit: cover;
         width: 100%;
@@ -132,7 +131,7 @@ export const ContactsStyles = styled.div`
         }
     }
 `;
-export const Sidebar = styled.ul`
+export const SidebarStyles = styled.ul`
     grid-area: 2 / 2 / 4 / 3;
     display: flex;
     flex-direction: column;
@@ -154,7 +153,7 @@ export const Sidebar = styled.ul`
         outline: 1px solid var(--white);
     }
 `;
-export const LangSwitch = styled.div`
+export const LangSwitchStyles = styled.div`
     grid-area: 1/2;
     display: flex;
     align-items: flex-end;
