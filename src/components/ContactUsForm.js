@@ -48,7 +48,6 @@ export const ContactUsForm = ({ contactUs }) => {
                     });
                 alert(values);
                 } catch (error) {
-                    alert(error);
                 }
             }}
         >
