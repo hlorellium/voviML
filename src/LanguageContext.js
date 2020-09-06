@@ -24,6 +24,14 @@ export const languages = {
             fax: 'Fax',
             mail: 'Mail',
             web: 'Web',
+            contactUs: {
+                header: "Contact Us",
+                labelName: "Your name",
+                labelMail: "Your email",
+                labelPhone: "Your phone",
+                labelMessage: "Your message",
+                button: "Send"
+            }
         },
     },
     et: {
@@ -48,6 +56,14 @@ export const languages = {
             fax: 'Faksimine',
             mail: 'E-post',
             web: 'Web',
+            contactUs: {
+                header: "Võta meiega ühendust",
+                labelName: "Sinu nimi",
+                labelMail: "Sinu email",
+                labelPhone: "Sinu telefoninumber",
+                labelMessage: "Sinu sõnum",
+                button: "Saada"
+            }
         },
     },
 };

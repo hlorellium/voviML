@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react';
-import { ContactsStyles } from '../styled-components';
 import GoogleMapReact from 'google-map-react';
+import { ContactsStyles } from '../styled-components';
 import { LocationPin } from './LocationPin';
+import { ContactUsForm } from './ContactUsForm';
 
 export const Contact = ({ data, setCurrentPage }) => {
     // eslint-disable-next-line
@@ -29,22 +30,23 @@ export const Contact = ({ data, setCurrentPage }) => {
                     {data.contact.mail}: <span>voviml(ät)hot.ee</span> <br />{' '}
                     {data.contact.web}: <span>www.voviml.eu</span>
                 </p>
+                <div className="map">
+                    <GoogleMapReact
+                        bootstrapURLKeys={{
+                            key: 'AIzaSyAblU3Umy0cY0Dq-WX6yXtXe4sTuqtGzHc',
+                        }}
+                        defaultCenter={mapProps.center}
+                        defaultZoom={mapProps.zoom}
+                    >
+                        <LocationPin
+                            lat={58.268758}
+                            lng={26.521602}
+                            text="Nõo, Lao 11A"
+                        />
+                    </GoogleMapReact>
+                </div>
             </div>
-            <div className="map">
-                <GoogleMapReact
-                    bootstrapURLKeys={{
-                        key: 'AIzaSyAblU3Umy0cY0Dq-WX6yXtXe4sTuqtGzHc',
-                    }}
-                    defaultCenter={mapProps.center}
-                    defaultZoom={mapProps.zoom}
-                >
-                    <LocationPin
-                        lat={58.268758}
-                        lng={26.521602}
-                        text="Nõo, Lao 11A"
-                    />
-                </GoogleMapReact>
-            </div>
+                <ContactUsForm contactUs={data.contact.contactUs} />
         </ContactsStyles>
     );
 };
