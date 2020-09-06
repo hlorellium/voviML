@@ -37,14 +37,20 @@ export const ContactUsForm = ({ contactUs }) => {
                 message: '',
             }}
             validationSchema={SignupSchema}
-            onSubmit={async (values) => {
-                await fetch('/', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/x-www-form-urlencoded',
-                    },
-                    body: encode({ 'form-name': 'contact', ...values }),
-                });
+            onSubmit={async (values, {resetForm, setSubmitting, setErrors}) => {
+                try {
+                    await fetch('/', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/x-www-form-urlencoded',
+                        },
+                        body: encode({ 'form-name': 'contact', ...values }),})
+                        resetForm({})
+                } catch (error) {
+                    setSubmitting(false);
+                    setErrors({submit: error.message});
+                } 
+                
             }}
         >
             {({ errors, touched, isSubmitting }) => (
