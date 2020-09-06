@@ -38,17 +38,13 @@ export const ContactUsForm = ({ contactUs }) => {
             }}
             validationSchema={SignupSchema}
             onSubmit={async (values) => {
-                try {
-                    fetch('/', {
-                        method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/x-www-form-urlencoded',
-                        },
-                        body: encode({ 'form-name': 'contact', ...values }),
-                    });
-                alert(values);
-                } catch (error) {
-                }
+                await fetch('/', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded',
+                    },
+                    body: encode({ 'form-name': 'contact', ...values }),
+                });
             }}
         >
             {({ errors, touched, isSubmitting }) => (
