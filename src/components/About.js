@@ -12,7 +12,7 @@ export const About = ({ setCurrentPage, data }) => {
             setEpithet(data.about.your[i]);
             i++;
             if (i === data.about.your.length) i = 0;
-        }, 2000);
+        }, 3000);
         return () => clearInterval(interval);
     }, [data.about]);
     return (
