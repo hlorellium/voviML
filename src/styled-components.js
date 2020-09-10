@@ -11,6 +11,7 @@ export const Wrapper = styled.div`
     grid-template-rows: 50px 100px 100px 3fr;
     gap: 0px 40px;
     overflow-x: hidden;
+    overflow-y: auto;
     @media (max-width: 1024px) {
         grid-template-columns: 0.1fr 1.6fr repeat(2, 1.6fr) 0.1fr;
     }
@@ -128,14 +129,13 @@ export const AboutStyles = styled.div`
         }
         .ctaDiv {
             grid-area: 3 / 1 / 4 / 6;
-            margin-bottom: 30px;
+            margin: 20px 0 30px 0;
         }
         #above {
             position: relative;
             bottom: 200px;
             left: 200px;
             font-size: 1.4rem;
-            
         }
 
         .subtitle p {
@@ -306,6 +306,7 @@ export const FormStyled = styled.div`
             width: 100%;
         }
         width: 90%;
+        padding: 10px 20px;
     }
 `;
 
