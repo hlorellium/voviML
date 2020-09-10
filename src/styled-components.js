@@ -83,8 +83,7 @@ export const AboutStyles = styled.div`
         color: var(--${(props) => props.textColor});
         font-family: 'Tommy Outline', 'Noto Sans', sans-serif;
     }
-    .changingText:hover {
-    }
+
     .subtitle p {
         line-height: 1.6;
         font-size: 1.2rem;
@@ -107,7 +106,6 @@ export const AboutStyles = styled.div`
         border: none;
         text-transform: uppercase;
         background-color: rgba(11, 10, 10, 0.95);
-
         transition: background-color 0.2s ease-in-out;
     }
     .cta:hover {
@@ -132,10 +130,8 @@ export const AboutStyles = styled.div`
             margin: 20px 0 30px 0;
         }
         #above {
-            position: relative;
-            bottom: 200px;
-            left: 200px;
-            font-size: 1.4rem;
+            margin: 20px 0;
+            font-size: 1.3rem;
         }
 
         .subtitle p {
@@ -147,11 +143,20 @@ export const AboutStyles = styled.div`
         .header h1 {
             font-size: 3.8rem;
         }
-
         .cta {
             font-size: 1.3rem;
         }
     }
+    @media (max-width: 400px) {
+        .header h1 {
+            font-size: 3.4rem;
+        }
+        .cta {
+            font-size: 1.2rem;
+        }
+
+    }
+
 `;
 
 export const ToolsStyles = styled.div`
