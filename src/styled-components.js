@@ -4,7 +4,6 @@ import bgPhoto from './media/gearwide.jpg';
 
 export const Wrapper = styled.div`
     height: 100vh;
-
     color: var(--black);
     display: grid;
     grid-template-columns: 0.7fr 1fr repeat(2, 1.3fr) 0.7fr;
@@ -381,6 +380,8 @@ export const Background = styled.div`
         -o-background-size: cover;
         background-size: cover;
     }
+padding-bottom: 30px;
+
 `;
 export const BlueBg = styled.div`
     grid-area: 1 / 1 / 3 / 6;
