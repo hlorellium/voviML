@@ -17,14 +17,13 @@ export const Wrapper = styled.div`
 
     @media (max-width: 900px) {
         grid-template-columns: 0.05fr 2fr repeat(2, 1.3fr) 0fr;
-        grid-template-rows: 50px 100px 120px 3fr;
+        grid-template-rows: 50px 100px 120px 3fr 40px;
         gap: 0px 10px;
     }
 `;
 
 export const MainContainer = styled.div`
     grid-area: 4 / 2 / 5 / 5;
-    padding-bottom: 25px;
     @media (max-width: 1024px) {
         grid-area: 4 / 2 / 5 / 5;
     }
@@ -380,7 +379,6 @@ export const Background = styled.div`
         -o-background-size: cover;
         background-size: cover;
     }
-padding-bottom: 30px;
 
 `;
 export const BlueBg = styled.div`
