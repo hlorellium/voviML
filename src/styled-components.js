@@ -114,10 +114,6 @@ export const AboutStyles = styled.div`
         background-color: var(--${(props) => props.textColor});
     }
     @media (max-width: 1100px) {
-        #above {
-            margin-top: 20px;
-            font-size: 1.3rem;
-        }
         .subtitle p {
             font-size: 1rem;
         }
@@ -135,24 +131,21 @@ export const AboutStyles = styled.div`
             margin-bottom: 30px;
         }
         #above {
-            position: absolute;
-            top: 10px;
-            right: 20px;
+            position: relative;
+            bottom: 200px;
+            left: 200px;
+            font-size: 1.4rem;
+            
         }
-        html:not([data-scroll='0']) #above {
-            display: hidden;
-        }
+
         .subtitle p {
             font-weight: normal;
             font-family: 'Noto Sans', sans-serif;
         }
     }
     @media (max-width: 700px) {
-        .changingText {
-            font-size: 3.8rem;
-        }
         .header h1 {
-            font-size: 5rem;
+            font-size: 3.8rem;
         }
 
         .cta {
