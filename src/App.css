@@ -1,28 +1,58 @@
 * {
- box-sizing: border-box;
+    box-sizing: border-box;
 }
 
-#root {
-    --black: #0B0A0A;
-    --blue: #007DC3;
-    --white: #FFFFFF;
-    --gray: #F1F6F8;
-    --grayish: #DEE2E6;
+:root {
+    --black: #0b0a0a;
+    --blue: #007dc3;
+    --white: #ffffff;
+    --gray: #f1f6f8;
+    --grayish: #dee2e6;
     --dark-gray: #ced4da;
+    --red: #ff6b6b;
 }
 
-html, body {
+html,
+body {
     margin: 0;
     padding: 0;
     font-family: 'Noto Sans', sans-serif;
-    
 }
 
-.fade-enter {
-    opacity: 0;
-  }
-  
-  .fade-enter.fade-enter-active {
-    opacity: 1;
-    transition: opacity 250ms ease-in;
-  }
+@font-face {
+    font-family: morganite;
+    src: url(./fonts/Morganite-Medium.ttf);
+}
+@font-face {
+    font-family: morganite;
+    src: url(./fonts/Morganite-Bold.ttf);
+    font-weight: bold;
+}
+@font-face {
+    font-family: Grifter;
+    src: url(./fonts/GRIFTER™+Bold.otf);
+}
+@font-face {
+    font-family: 'Tommy Outline';
+    src: url(./fonts/MADE\ TOMMY\ Regular\ Outline.otf);
+}
+@font-face {
+    font-family: 'Tommy Outline';
+    src: url(./fonts/MADE\ TOMMY\ ExtraBold\ Outline.otf);
+    font-weight: bolder;
+}
+
+@font-face {
+    font-family: Tommy;
+    src: url(./fonts/MADE\ TOMMY\ Regular.otf);
+}
+@font-face {
+    font-family: Tommy;
+    src: url(./fonts/MADE\ TOMMY\ Bold.otf);
+    font-weight: bold;
+}
+@font-face {
+    font-family: Tommy;
+    src: url(./fonts/MADE\ TOMMY\ ExtraBold.otf);
+    font-weight: bolder;
+}

@@ -9,7 +9,10 @@ export const SwitchComponent = ({ data, setCurrentPage }) => {
     return (
         <Switch>
             <Route exact path="/">
-                <About data={data} setCurrentPage={setCurrentPage} />
+                <About
+                    data={data}
+                    setCurrentPage={setCurrentPage}
+                />
             </Route>
             <Route exact path="/tools">
                 <Tools data={data} setCurrentPage={setCurrentPage} />

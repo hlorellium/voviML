@@ -34,15 +34,15 @@ export const Menu = () => {
         <Router>
             <Wrapper>
                 <BlueBg />
-                <DarkBg />
-                <Background />
+                <DarkBg rowEnd={currentPage === '' ? 6 : 4} />
+                <Background rowEnd={currentPage === '' ? 6 : 4} />
                 <LangSwitch
                     currentLanguage={currentLanguage}
                     setCurrentLanguage={setCurrentLanguage}
                 />
                 <Sidebar menu={data.menu} />
                 <CurrentPage> {currentPage}</CurrentPage>
-                <MainContainer>
+                <MainContainer >
                     <SwitchComponent
                         data={data}
                         setCurrentPage={setCurrentPage}

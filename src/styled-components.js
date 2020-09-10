@@ -23,7 +23,6 @@ export const Wrapper = styled.div`
 `;
 
 export const MainContainer = styled.div`
-    background-color: #fff;
     grid-area: 4 / 2 / 5 / 5;
     padding-bottom: 25px;
     @media (max-width: 1024px) {
@@ -49,18 +48,89 @@ export const CurrentPage = styled.div`
 `;
 
 export const AboutStyles = styled.div`
-    h3 {
-        font-size: 2em;
-        color: var(--blue);
+    color: var(--white);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-auto-columns: auto;
+    grid-auto-rows: min-content;
+    font-family: Tommy, 'Noto Sans', sans-serif;
+    gap: 1px 1px;
+    height: 100%;
+    .header {
+        grid-area: 1 / 3 / 2 / 6;
+        display: flex;
+        flex-direction: column;
     }
-    p {
-        font-size: 1.5em;
+    .subtitle {
+        grid-area: 2 / 3 / 3 / 6;
+    }
+    #above {
+        font-size: 1.5rem;
+        font-weight: bolder;
+        margin: 0;
+    }
+    .header h1 {
+        font-size: 6em;
+        color: var(--white);
+        font-weight: bolder;
+        margin: 0;
+        text-transform: uppercase;
+        display: flex;
+        flex-direction: column;
+    }
+    .changingText {
+        color: var(--${(props) => props.textColor});
+        font-family: 'Tommy Outline', 'Noto Sans', sans-serif;
+    }
+    .changingText:hover {
+    }
+    .subtitle p {
         line-height: 1.6;
+        font-size: 1.2rem;
         white-space: pre-line;
+        font-weight: lighter;
+        letter-spacing: 0.05rem;
+    }
+    .ctaDiv {
+        grid-area: 3 / 3 / 4 / 6;
+        display: grid;
+        place-items: center;
+    }
+    .cta {
+        padding: 20px 30px;
+        font-size: 1.5em;
+        font-weight: bolder;
+        color: var(--white);
+        cursor: pointer;
+        outline: 2px solid var(--${(props) => props.textColor});
+        border: none;
+        text-transform: uppercase;
+        /* background-color: var(--${(props) => props.textColor}); */
+        background-color: rgba(11, 10, 10, 0.95);
+
+        transition: background-color 0.2s ease-in-out;
+
+    }
+    .cta:hover {
+        transition: 0.2s ease-in-out;
+        background-color: var(--${(props) => props.textColor});
+
     }
     @media (max-width: 1100px) {
-        p {
+        #above {
+            margin-top: 20px;
+        }
+        .subtitle p {
             font-size: 1em;
+        }
+        .header {
+            grid-area: 1 / 1 / 2 / 6;
+        }
+        .subtitle {
+            grid-area: 2 / 1 / 3 / 6;
+        }
+        .ctaDiv {
+            grid-area: 3 / 1 / 4 / 6;
         }
     }
 `;
@@ -143,7 +213,7 @@ export const ErrorDiv = styled.div`
     font-size: 1rem;
     width: 100%;
     padding: 5px 0;
-    color: #FF6B6B;
+    color: var(--red);
 `;
 
 export const FormStyled = styled.div`
@@ -221,6 +291,7 @@ export const FormStyled = styled.div`
 `;
 
 export const SidebarStyles = styled.ul`
+    z-index: 3;
     grid-area: 2 / 2 / 4 / 3;
     display: flex;
     flex-direction: column;
@@ -271,7 +342,7 @@ export const NavBtn = styled.div`
 `;
 
 export const Background = styled.div`
-    grid-area: 1 / 1 / 4 / 6;
+    grid-area: 1 / 1 / ${(props) => props.rowEnd} / 6;
     background: url(${bgPhoto});
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -288,11 +359,11 @@ export const Background = styled.div`
 `;
 export const BlueBg = styled.div`
     grid-area: 1 / 1 / 3 / 6;
-    background-color: rgba(0, 74, 204, 0.8);
+    background-color: rgba(0, 74, 204, 0.9);
     border-bottom: 1px solid var(--white);
 `;
 export const DarkBg = styled.div`
-    grid-area: 3 / 1 / 3 / 6;
-    background-color: rgba(11, 10, 10, 0.8);
+    grid-area: 3 / 1 / ${(props) => props.rowEnd} / 6;
+    background-color: rgba(11, 10, 10, 0.95);
     border-bottom: 1px solid var(--black);
 `;
