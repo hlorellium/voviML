@@ -17,7 +17,7 @@ export const Wrapper = styled.div`
 
     @media (max-width: 900px) {
         grid-template-columns: 0.05fr 2fr repeat(2, 1.3fr) 0fr;
-        grid-template-rows: 50px 100px 120px 3fr 40px;
+        grid-template-rows: 50px 100px 120px 3fr;
         gap: 0px 10px;
     }
 `;
@@ -27,6 +27,8 @@ export const MainContainer = styled.div`
     margin-bottom: 30px;
     @media (max-width: 1024px) {
         grid-area: 4 / 2 / 5 / 5;
+    margin-bottom: 45px;
+
     }
 `;
 
@@ -54,7 +56,6 @@ export const AboutStyles = styled.div`
     grid-auto-columns: auto;
     grid-auto-rows: min-content;
     font-family: Tommy, 'Noto Sans', sans-serif;
-    gap: 1px 1px;
     height: 100%;
     .header {
         grid-area: 1 / 3 / 2 / 6;
