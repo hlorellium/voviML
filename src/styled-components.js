@@ -105,7 +105,6 @@ export const AboutStyles = styled.div`
         outline: 2px solid var(--${(props) => props.textColor});
         border: none;
         text-transform: uppercase;
-        /* background-color: var(--${(props) => props.textColor}); */
         background-color: rgba(11, 10, 10, 0.95);
 
         transition: background-color 0.2s ease-in-out;
@@ -131,6 +130,7 @@ export const AboutStyles = styled.div`
         }
         .ctaDiv {
             grid-area: 3 / 1 / 4 / 6;
+            margin-bottom: 30px;
         }
     }
 `;
