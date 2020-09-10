@@ -108,22 +108,24 @@ export const AboutStyles = styled.div`
         background-color: rgba(11, 10, 10, 0.95);
 
         transition: background-color 0.2s ease-in-out;
-
     }
     .cta:hover {
         transition: 0.2s ease-in-out;
         background-color: var(--${(props) => props.textColor});
-
     }
     @media (max-width: 1100px) {
         #above {
             margin-top: 20px;
+            font-size: 1.3rem;
         }
         .subtitle p {
-            font-size: 1em;
+            font-size: 1rem;
         }
         .header {
             grid-area: 1 / 1 / 2 / 6;
+        }
+        .header h1 {
+            font-size: 5rem;
         }
         .subtitle {
             grid-area: 2 / 1 / 3 / 6;
@@ -131,6 +133,30 @@ export const AboutStyles = styled.div`
         .ctaDiv {
             grid-area: 3 / 1 / 4 / 6;
             margin-bottom: 30px;
+        }
+        #above {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+        }
+        html:not([data-scroll='0']) #above {
+            display: hidden;
+        }
+        .subtitle p {
+            font-weight: normal;
+            font-family: 'Noto Sans', sans-serif;
+        }
+    }
+    @media (max-width: 700px) {
+        .changingText {
+            font-size: 3.8rem;
+        }
+        .header h1 {
+            font-size: 5rem;
+        }
+
+        .cta {
+            font-size: 1.3rem;
         }
     }
 `;
