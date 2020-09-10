@@ -24,6 +24,7 @@ export const Wrapper = styled.div`
 
 export const MainContainer = styled.div`
     grid-area: 4 / 2 / 5 / 5;
+    margin-bottom: 30px;
     @media (max-width: 1024px) {
         grid-area: 4 / 2 / 5 / 5;
     }
@@ -125,7 +126,7 @@ export const AboutStyles = styled.div`
         }
         .ctaDiv {
             grid-area: 3 / 1 / 4 / 6;
-            margin: 20px 0 30px 0;
+            margin-top: 20px;
         }
         #above {
             margin: 20px 0;
