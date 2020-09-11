@@ -105,12 +105,15 @@ export const AboutStyles = styled.div`
         outline: 2px solid var(--${(props) => props.textColor});
         border: none;
         text-transform: uppercase;
-        background-color: rgba(11, 10, 10, 0.95);
         transition: background-color 0.2s ease-in-out;
+        background-color: var(--${(props) => props.textColor});
+
     }
     .cta:hover {
         transition: 0.2s ease-in-out;
-        background-color: var(--${(props) => props.textColor});
+        background-color: rgba(11, 10, 10, 0.95);
+        color: var(--${(props) => props.textColor});
+
     }
     @media (max-width: 1100px) {
         .subtitle p {
