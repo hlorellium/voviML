@@ -12,7 +12,7 @@ export const languages = {
         },
         about: {
             above: 'VoviML Est. 1996',
-            header: "Let's create ",
+            header: "Let us create ",
             your: ['your', 'reliable', 'quality'],
             detail: 'detail',
 cta: 'Contact Us',
