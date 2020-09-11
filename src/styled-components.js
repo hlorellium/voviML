@@ -392,4 +392,8 @@ export const DarkBg = styled.div`
     grid-area: 3 / 1 / ${(props) => props.rowEnd} / 6;
     background-color: rgba(11, 10, 10, 0.95);
     border-bottom: 1px solid var(--black);
+    @media only screen and (max-width: 1100px) {
+    background-color: rgba(11, 10, 10, 0.90);
+
+    }
 `;
