@@ -22,15 +22,20 @@ export const About = ({ setCurrentPage, data }) => {
             <div className="header">
                 <h3 id="above">{data.about.above}</h3>
                 <h1>
-                    {data.about.header}{' '}
-                    <span className="changingText">{epithet}</span>{' '}
-                    {data.about.detail}
+                    {data.about.header}
+                    <div>
+                        <span className="changingText"> {epithet} </span>
+                        {data.about.detail}
+                    </div>
                 </h1>
             </div>
             <div className="subtitle">
                 <p>{data.about.subtitle}</p>
             </div>
             <div className="ctaDiv">
+                <Link exact to="/about">
+                    <button className="cta cta2">{data.about.cta2}</button>
+                </Link>
                 <Link exact to="/contact">
                     <button className="cta">{data.about.cta}</button>
                 </Link>

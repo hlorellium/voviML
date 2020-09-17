@@ -9,7 +9,7 @@ import photo_5 from '../media/gallery/5.jpg';
 
 export const Gallery = ({ data, setCurrentPage }) => {
     // eslint-disable-next-line
-    useEffect(() => setCurrentPage(data.menu.gallery), [data.menu.gallery]);
+    // useEffect(() => setCurrentPage(data.menu.gallery), [data.menu.gallery]);
 
   
 

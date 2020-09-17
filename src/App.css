@@ -16,7 +16,11 @@ html,
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+
+::selection {
+    background: var(--blue);
 }
 
 @font-face {

@@ -4,8 +4,8 @@ import pumaPhoto from '../media/Puma_230B.jpg';
 import lynxPhoto from '../media/lynx-210b.jpg';
 
 export const Tools = ({ data, setCurrentPage }) => {
-    // eslint-disable-next-line
-    useEffect(() => setCurrentPage(data.menu.tools), [data.menu.tools]);
+    // // eslint-disable-next-line
+    // useEffect(() => setCurrentPage(data.menu.tools), [data.menu.tools]);
 
     return (
         <ToolsStyles>
