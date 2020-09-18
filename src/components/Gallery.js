@@ -11,16 +11,17 @@ export const Gallery = ({ data, setCurrentPage }) => {
     // eslint-disable-next-line
     // useEffect(() => setCurrentPage(data.menu.gallery), [data.menu.gallery]);
 
-  
-
     return (
         <GalleryGrid>
-            <img src={photo_0} id="photo_0" alt="Detail" />
-            <img src={photo_1} id="photo_1" alt="Detail" />
-            <img src={photo_2} id="photo_2" alt="Detail" />
-            <img src={photo_3} id="photo_3" alt="Detail" />
-            <img src={photo_4} id="photo_4" alt="Detail" />
-            <img src={photo_5} id="photo_5" alt="Detail" />
+            <h1>Portfolio</h1>
+            <div>
+                <img src={photo_0} id="photo_0" alt="Detail" />
+                <img src={photo_1} id="photo_1" alt="Detail" />
+                <img src={photo_2} id="photo_2" alt="Detail" />
+                <img src={photo_3} id="photo_3" alt="Detail" />
+                <img src={photo_4} id="photo_4" alt="Detail" />
+                <img src={photo_5} id="photo_5" alt="Detail" />
+            </div>
         </GalleryGrid>
     );
 };

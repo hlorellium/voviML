@@ -6,8 +6,8 @@ export const Wrapper = styled.div`
     height: 100vh;
     color: var(--black);
     display: grid;
-    grid-template-columns: 0.7fr 1fr repeat(2, 1.3fr) 0.7fr;
-    grid-template-rows: 50px 100px 100px 3fr;
+    grid-template-columns: 0.7fr 1.5fr repeat(2, 1.15fr) 0.7fr;
+    grid-template-rows: 70px 1fr;
     gap: 0px 40px;
     overflow-x: hidden;
     overflow-y: auto;
@@ -18,51 +18,89 @@ export const Wrapper = styled.div`
 
     @media (max-width: 900px) {
         grid-template-columns: 0.05fr 2fr repeat(2, 1.3fr) 0fr;
-        grid-template-rows: 50px 100px 120px 3fr;
+        grid-template-rows: 60px 3fr;
         gap: 0px 10px;
     }
 `;
 
 export const MainContainer = styled.div`
-    grid-area: 4 / 2 / 5 / 5;
+    grid-area: 2 / 2 / 3 / 5;
     margin-bottom: 30px;
     @media (max-width: 1024px) {
-        grid-area: 4 / 2 / 5 / 5;
+        grid-area: 2 / 2 / 3 / 5;
         margin-bottom: 45px;
     }
+    place-content: center;
 `;
 
-export const SidebarStyles = styled.ul`
+export const NavbarStyles = styled.ul`
     z-index: 3;
-    grid-area: 2 / 2 / 4 / 3;
+    grid-area: 1 / 3 / 2 / 5;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
     list-style: none;
-    padding: 0;
     font-family: Poppins, sans-serif;
     a {
-        font-weight: 600;
-        color: var(--blue);
+        font-weight: 500;
+        font-size: 1.2rem;
+        color: var(--white);
         text-decoration: none;
         border-bottom: 1px solid black;
     }
-    .active {
-        color: var(--white);
-        /* text-decoration: underline; */
+    a:hover {
+        color: var(--red);
     }
-    .active div {
-        background-color: var(--black) !important;
-        outline: 1px solid var(--white);
+    .active {
+        color: var(--red);
+    }
+
+
+
+    @media (max-width: 800px) {
+        grid-area: 1 / 2 / 2 / 5;
     }
 `;
+
+export const NavBtn = styled.div`
+    padding: 10px;
+    transition: 0.1s ease-in-out;
+    :hover {
+        transition: 0.1s ease-in-out;
+    }
+`;
+
+// export const SidebarStyles = styled.ul`
+//     z-index: 3;
+//     grid-area: 2 / 2 / 4 / 3;
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//     list-style: none;
+//     padding: 0;
+//     font-family: Poppins, sans-serif;
+//     a {
+//         font-weight: 600;
+//         color: var(--blue);
+//         text-decoration: none;
+//         border-bottom: 1px solid black;
+//     }
+//     .active {
+//         color: var(--white);
+//         /* text-decoration: underline; */
+//     }
+//     .active div {
+//         background-color: var(--black) !important;
+//         outline: 1px solid var(--white);
+//     }
+// `;
 
 export const CurrentPage = styled.div`
     display: flex;
     align-items: center;
     font-size: 3em;
     font-weight: bold;
-    grid-area: 3 / 3 / 3 / 5;
+    grid-area: 2 / 3 / 2 / 5;
     color: var(--white);
 
     @media (max-width: 1024px) {
@@ -76,19 +114,14 @@ export const CurrentPage = styled.div`
 
 export const AboutStyles = styled.div`
     color: var(--white);
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-auto-columns: auto;
-    grid-auto-rows: min-content;
     height: 100%;
-    /* place-items: center; */
+    display: flex;
+    flex-direction: column;
     .header {
-        grid-area: 1 / 1 / 2 / 6;
         display: flex;
         flex-direction: column;
     }
     .subtitle {
-        grid-area: 2 / 1 / 3 / 4;
     }
     #above {
         font-size: 1.5rem;
@@ -118,8 +151,6 @@ export const AboutStyles = styled.div`
     }
     .ctaDiv {
         margin-top: 5%;
-        grid-area: 3 / 1 / 4 / 4;
-        /* grid-area: 2 / 4 / 3 / 6; */
         display: grid;
         place-items: center;
         display: flex;
@@ -146,57 +177,46 @@ export const AboutStyles = styled.div`
 
         color: var(--white);
     }
-    @media (max-width: 1100px) {
 
-        .header {
-            grid-area: 1 / 1 / 2 / 6;
-        }
-        .header h1 {
-            font-size: 5rem;
-        }
-        .subtitle {
-            grid-area: 2 / 1 / 3 / 6;
-        }
-        .ctaDiv {
-            grid-area: 3 / 1 / 4 / 6;
-            margin-top: 20px;
-        }
-        #above {
-            margin: 20px 0;
-            font-size: 1.3rem;
-        }
 
-        .subtitle p {
-            font-weight: normal;
-            font-family: 'Noto Sans', sans-serif;
-        }
-    }
-    @media (max-width: 700px) {
-        .header h1 {
-            font-size: 3.8rem;
-        }
-        .cta {
-            font-size: 1.3rem;
-        }
-    }
-    @media (max-width: 400px) {
-        .header h1 {
-            font-size: 3.4rem;
-        }
-        .cta {
-            font-size: 1.2rem;
-        }
-    }
 `;
 
 export const ToolsStyles = styled.div`
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    margin-top: 5vh;
+
+    h1 {
+        text-align: center;
+        font-family: Poppins, sans-serif;
+        font-weight: 600;
+    }
+    .tools {
+        display: flex;
+        justify-content: space-evenly;
+    }
+    @media (max-width: 900px) {
+        .tools {
+            flex-direction: column;
+        }
+    }
+`;
+
+export const ToolCard = styled.div`
+    padding: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--gray);
+    width: min(500px, 70%);
+    margin: 0 25px;
     h3 {
         font-size: 2em;
+        margin-bottom: 50px;
     }
     img {
-        max-width: 100%;
+        width: max(250px, 80%);
         height: auto;
     }
 
@@ -207,17 +227,28 @@ export const ToolsStyles = styled.div`
 
 export const GalleryGrid = styled.div`
     margin-top: 5vh;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 400px));
-    grid-gap: 10px;
-    max-width: 100%;
-    img {
-        object-fit: cover;
-        width: 100%;
-        max-height: 100%;
+    h1 {
+        text-align: center;
+        font-family: Poppins, sans-serif;
+        font-weight: 600;
     }
+    div {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 400px));
+        grid-gap: 10px;
+
+        max-width: 100%;
+        img {
+            object-fit: cover;
+            width: 100%;
+            max-height: 100%;
+        }
+    }
+
     @media (max-width: 1100px) {
-        grid-template-columns: repeat(auto-fill, minmax(200px, 300px));
+        div {
+            grid-template-columns: repeat(auto-fill, minmax(200px, 300px));
+        }
     }
 `;
 
@@ -346,9 +377,10 @@ export const FormStyled = styled.div`
 `;
 
 export const LangSwitchStyles = styled.div`
-    grid-area: 1/2;
+    grid-area: 1/5;
     display: flex;
-    align-items: flex-end;
+    align-items: center;
+    justify-content: center;
     font-weight: bold;
     span {
         margin-right: 10px;
@@ -361,14 +393,9 @@ export const LangSwitchStyles = styled.div`
     .selectedLang {
         display: none;
     }
-`;
-
-export const NavBtn = styled.div`
-    background-color: var(--gray);
-    padding: 10px 10%;
-
-    :hover {
-        background-color: var(--grayish);
+    @media (max-width: 1024px) {
+        grid-area: 1 / 1;
+        margin-left: 10px;
     }
 `;
 
@@ -389,14 +416,12 @@ export const Background = styled.div`
     }
 `;
 export const BlueBg = styled.div`
-    grid-area: 1 / 1 / 3 / 6;
-    background-color: rgba(0, 74, 204, 0.9);
-    border-bottom: 1px solid var(--white);
+    grid-area: 1 / 1 / 2 / 6;
+    /* background-color: rgba(0, 74, 204, 0.95); */
 `;
 export const DarkBg = styled.div`
-    grid-area: 3 / 1 / ${(props) => props.rowEnd} / 6;
+    grid-area: 1 / 1 / ${(props) => props.rowEnd} / 6;
     background-color: rgba(11, 10, 10, 0.95);
-    border-bottom: 1px solid var(--black);
     @media only screen and (max-width: 1100px) {
         background-color: rgba(11, 10, 10, 0.9);
     }

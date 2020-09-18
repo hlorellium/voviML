@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
-import { ToolsStyles } from '../styled-components';
-import pumaPhoto from '../media/Puma_230B.jpg';
-import lynxPhoto from '../media/lynx-210b.jpg';
+import { ToolsStyles, ToolCard } from '../styled-components';
+import pumaPhoto from '../media/puma_230.jpg';
+import lynxPhoto from '../media/lynx-220-01.jpg';
 
 export const Tools = ({ data, setCurrentPage }) => {
     // // eslint-disable-next-line
@@ -9,13 +9,16 @@ export const Tools = ({ data, setCurrentPage }) => {
 
     return (
         <ToolsStyles>
-            <div>
-                <h3>Daewoo Puma 230B</h3>
-                <img src={pumaPhoto} alt="Daewoo Puma 230B" />
-            </div>
-            <div>
-                <h3>Daewoo Lynx 210</h3>
-                <img src={lynxPhoto} alt="Daewoo Lynx 210" />
+            <h1>Used machine tools</h1>
+            <div className="tools">
+                <ToolCard>
+                    <h3>Daewoo Puma 230B</h3>
+                    <img src={pumaPhoto} alt="Daewoo Puma 230B" />
+                </ToolCard>
+                <ToolCard>
+                    <h3>Daewoo Lynx 210</h3>
+                    <img src={lynxPhoto} alt="Daewoo Lynx 210" />
+                </ToolCard>
             </div>
         </ToolsStyles>
     );

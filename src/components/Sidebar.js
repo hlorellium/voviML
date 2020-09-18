@@ -1,10 +1,10 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
-import { SidebarStyles, NavBtn } from '../styled-components';
+import { NavbarStyles, NavBtn } from '../styled-components';
 
 export const Sidebar = ({ menu }) => (
-    <SidebarStyles>
+    <NavbarStyles>
         <li>
             <NavLink exact to="/">
                 <NavBtn>{menu.home}</NavBtn>
@@ -30,5 +30,5 @@ export const Sidebar = ({ menu }) => (
                 <NavBtn>{menu.contacts}</NavBtn>
             </NavLink>
         </li>
-    </SidebarStyles>
+    </NavbarStyles>
 );
