@@ -2,7 +2,7 @@ import React, { useContext, useState, useMemo } from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import './App.css';
 import { SwitchComponent } from './components/SwitchComponent';
-import { LangSwitch } from './components/LangSwitch';
+import { Switcher } from './components/Switcher';
 import { LanguageContext } from './LanguageContext';
 import { Sidebar } from './components/Sidebar';
 import {
@@ -28,17 +28,19 @@ export const Menu = () => {
         // eslint-disable-next-line
         [currentLanguage]
     );
+const [isLightTheme, setIsLightTheme] = useState(false);
     const [currentPage, setCurrentPage] = useState('');
     console.log(data);
     return (
         <Router>
-            <Wrapper>
+            <Wrapper className={isLightTheme ? "lightTheme" : ""}>
                 <BlueBg />
                 <DarkBg rowEnd={currentPage === '' ? 3 : 2} />
                 <Background rowEnd={currentPage === '' ? 3 : 2} />
-                <LangSwitch
+                <Switcher
                     currentLanguage={currentLanguage}
                     setCurrentLanguage={setCurrentLanguage}
+                    setIsLightTheme={setIsLightTheme}
                 />
                 <Sidebar menu={data.menu} />
                 <MainContainer >
