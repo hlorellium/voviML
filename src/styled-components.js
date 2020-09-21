@@ -168,6 +168,7 @@ export const HamburgerMenu = styled.div`
         text-align: center;
         color: #fff;
         text-decoration: none;
+        white-space: nowrap;
     }
     li > a::before {
         content: '';
@@ -239,7 +240,7 @@ export const AboutStyles = styled.div`
     }
 
     .subtitle p {
-        font-size: 0.8em;
+        font-size: 1em;
         white-space: pre-line;
         color: var(--dark-gray);
         font-weight: 300;
@@ -270,10 +271,17 @@ export const AboutStyles = styled.div`
         color: var(--${(props) => props.textColor});
         background-color: var(--white);
     }
+    @media (max-width: 900px) {
+        .subtitle p {
+        font-size: 1.4em;
+        }
+    
+    }
     @media (max-width: 400px) {
         .header h1 {
             font-size: 4em;
         }
+
     }
 `;
 
@@ -353,24 +361,36 @@ export const MoreAboutStyles = styled.div`
         font-weight: 600;
         font-size: 1.5em;
     }
-    h3 {
-        font-size: 1.1em;
-        margin: 0;
-    }
+
     .aboutBlock {
+        margin-top: 5vh;
         display: flex;
         justify-content: space-between;
         align-items: center;
         h1 {
             border-bottom: var(--black);
+
+        }
+        p {
+        font-weight: 300;
+            
         }
         div {
-            margin-right: 10%;
+            margin-right: 5%;
         }
         img {
             object-fit: cover;
-            width: 50%;
+            width: max(400px, 50%);
             max-height: 100%;
+        }
+    }
+    @media(max-width: 1024px) {
+        .aboutBlock {
+            flex-direction: column;
+            img {
+            width: max(300px, 70%);
+
+            }
         }
     }
 `;
