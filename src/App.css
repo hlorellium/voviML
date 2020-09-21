@@ -30,7 +30,7 @@ body {
 }
 
 ::selection {
-    background: var(--blue);
+    background: #72c7f8;
 }
 
 @media screen and (min-width: 320px) {

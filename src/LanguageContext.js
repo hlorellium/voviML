@@ -17,14 +17,10 @@ export const languages = {
             detail: 'detail',
             cta: 'Contact Us',
             cta2: 'About Us',
-            text: `OÜ VoviML is founded in September 1996, in Tartu. Since October 2004, the main occupation of the company is CNC metalworking.
-            We have over fifteen years of experience in metalworking to ensure the highest quality of our work and it allows us to promise our clients high precision in the manufacturing of details. We use modern technology for metal cutting, to ensure the highest quality, on modern CNC machines.
-            All our metalworking is done individually in prototypes, single quantities, and mass production, based on customer requirements.
-            We offer metalworking in such material capabilities as steel, stainless steel, aluminum, copper, bronze, brass, plastic, etc.
-            If You'd like to know more about what our company can do for You, please don't hesitate to contact us.`,
+            text: `All our metalworking is done individually in prototypes, single quantities, and mass production, based on customer requirements. 
+            We offer metalworking in such material capabilities as steel, stainless steel, aluminum, copper, bronze, brass, plastic, etc.`,
             subtitle:
                 'We have over fifteen years of experience in metalworking and it allows us to promise our clients high precision in manufacturing of details. \n We use modern technology for metal cutting, to ensure the highest quality, on modern CNC machines.',
-                
         },
 
         contact: {

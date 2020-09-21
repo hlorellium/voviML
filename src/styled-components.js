@@ -52,6 +52,12 @@ export const NavbarStyles = styled.ul`
     li {
         position: relative;
         margin: 0;
+        opacity: 0.75;
+        transition: all 0.3s ease-in-out 0s;
+    }
+    li:hover {
+        opacity: 1;
+        transition: all 0.3s ease-in-out 0s;
     }
     li > a {
         color: var(--white);
@@ -74,12 +80,12 @@ export const NavbarStyles = styled.ul`
         transform: scaleX(1);
     }
 
-    .active  {
-        border-bottom: 2px solid var(--white);
+    .active::before {
+        visibility: visible;
+        transform: scaleX(1);
     }
-
     @media (max-width: 1200px) {
-        grid-area: 1 / 2 / 2 / 5;
+        grid-area: 1 / 1 / 2 / 4;
     }
     @media (max-width: 900px) {
         display: none;
@@ -115,22 +121,8 @@ export const HamburgerMenu = styled.div`
         fill: #fff;
         stroke: #fff;
     }
-    a {
-        font-weight: 500;
-        font-size: 2em;
-        color: #fff;
-        text-decoration: none;
-        border-bottom: 1px solid black;
-        text-align: center;
-    }
-    a:hover {
-        color: var(--blue);
-    }
-    .active {
-        color: var(--blue);
-    }
+
     .openedMenu {
-        /* display: ${(props) => (props.isOpened ? 'flex' : 'none')}; */
         display: flex;
         opacity: ${(props) => (props.isOpened ? 1 : 0)};
 
@@ -155,6 +147,47 @@ export const HamburgerMenu = styled.div`
         font-family: Poppins, sans-serif;
         height: 50%;
         padding: 0;
+    }
+
+    .activity {
+        opacity: 1;
+    }
+ 
+    li {
+        position: relative;
+        margin: 0;
+        opacity: 0.8;
+        transition: all 0.3s ease-in-out 0s;
+    }
+    li > a {
+        font-weight: 500;
+        font-size: 2em;
+        color: #fff;
+        text-decoration: none;
+        border-bottom: 1px solid black;
+        text-align: center;
+        color: #fff;
+        text-decoration: none;
+    }
+    li > a::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: #fff;
+        visibility: hidden;
+        transform: scaleX(0);
+        transition: all 0.3s ease-in-out 0s;
+    }
+    li > a:hover::before {
+        visibility: visible;
+        transform: scaleX(1);
+    }
+    .active::before {
+        visibility: visible;
+        transform: scaleX(1);
     }
 
     @media (max-width: 900px) {
@@ -324,6 +357,22 @@ export const MoreAboutStyles = styled.div`
         font-size: 1.1em;
         margin: 0;
     }
+    .aboutBlock {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        h1 {
+            border-bottom: var(--black);
+        }
+        div {
+            margin-right: 10%;
+        }
+        img {
+            object-fit: cover;
+            width: 50%;
+            max-height: 100%;
+        }
+    }
 `;
 
 export const ContactsStyles = styled.div`
@@ -462,18 +511,17 @@ export const SwitchButtonStyles = styled.div`
         display: flex;
         justify-content: space-between;
         align-items: center;
+        padding: 0;
     }
     li {
         padding: 10px;
     }
     span {
         cursor: pointer;
-
     }
     span > a {
         color: var(--white);
         text-decoration: none;
-
     }
     li > span::before {
         content: '';
@@ -493,11 +541,17 @@ export const SwitchButtonStyles = styled.div`
     }
 
     li {
-        margin: 0 15px;
+        margin: 0;
         color: var(--white);
         position: relative;
+        transition: all 0.3s ease-in-out 0s;
+        opacity: 0.8;
     }
 
+    li:hover {
+        opacity: 1;
+        transition: all 0.3s ease-in-out 0s;
+    }
     .selectedLang {
         display: none;
     }
@@ -515,7 +569,6 @@ export const SwitchButtonStyles = styled.div`
         transition: 0.3s ease-in-out;
         stroke: #0b0a0a;
         fill: #0b0a0a;
-        transform: rotate(0.05turn) scale(0.9);
     }
     #Moon:hover + #Moon path {
         fill: red;
@@ -533,6 +586,10 @@ export const SwitchButtonStyles = styled.div`
         justify-content: flex-start;
 
         margin-left: 10px;
+        ul {
+            display: flex;
+            flex-direction: row-reverse;
+        }
     }
 `;
 

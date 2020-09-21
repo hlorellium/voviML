@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, { useEffect } from 'react';
 import { SwitchButtonStyles } from '../styled-components';
 
 export const Switcher = ({
@@ -7,9 +7,11 @@ export const Switcher = ({
     setIsLightTheme,
     isLightTheme,
 }) => {
-useEffect(() => {
-    localStorage.getItem('lightTheme') === "true" ? setIsLightTheme(true) : setIsLightTheme(false);
-})
+    useEffect(() => {
+        localStorage.getItem('lightTheme') === 'true'
+            ? setIsLightTheme(true)
+            : setIsLightTheme(false);
+    });
     return (
         <SwitchButtonStyles isLightTheme={isLightTheme}>
             <ul>
@@ -61,20 +63,20 @@ useEffect(() => {
                             <path
                                 fill="none"
                                 stroke="#000000"
-                                stroke-width="5"
+                                stroke-width="10"
                                 stroke-linecap="round"
                                 stroke-linejoin="round"
                                 stroke-miterlimit="10"
                                 d="
-		M134.74,156.19c-50.28,0-91.04-40.76-91.04-91.04c0-23.75,9.1-45.38,24-61.59C31.9,18.28,6.61,54.32,6.61,96.45
-		c0,55.23,43.47,100,97.09,100c40.44,0,75.1-25.47,89.7-61.68C177.55,148.13,157.09,156.19,134.74,156.19z"
+		M119.2,155.1C82,136.7,66.7,91.6,85.1,54.4c8.7-17.6,23.3-30.3,40.3-36.8C93.5,15.4,61.6,32.8,46.2,64
+		c-20.2,40.9-4.4,89.9,35.3,109.5c29.9,14.8,64.9,8.6,89-12.9C153.9,164.8,135.8,163.2,119.2,155.1z"
                             />
                         </g>
                         <g id="Sun">
                             <circle
                                 fill="none"
                                 stroke="#000000"
-                                stroke-width="7"
+                                stroke-width="10"
                                 stroke-linecap="round"
                                 stroke-linejoin="round"
                                 stroke-miterlimit="10"
