@@ -35,12 +35,13 @@ const [isLightTheme, setIsLightTheme] = useState(false);
         <Router>
             <Wrapper className={isLightTheme ? "lightTheme" : ""}>
                 <BlueBg />
-                <DarkBg rowEnd={currentPage === '' ? 3 : 2} />
+                <DarkBg rowEnd={currentPage === '' ? 3 : 3} />
                 <Background rowEnd={currentPage === '' ? 3 : 2} />
                 <Switcher
                     currentLanguage={currentLanguage}
                     setCurrentLanguage={setCurrentLanguage}
                     setIsLightTheme={setIsLightTheme}
+                    isLightTheme={isLightTheme}
                 />
                 <Sidebar menu={data.menu} />
                 <MainContainer >

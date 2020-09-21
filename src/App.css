@@ -10,6 +10,7 @@
     --grayish: #dee2e6;
     --dark-gray: #ced4da;
     --red: #ff6b6b;
+    --animate: all 0.2s ease-in-out;
 }
 
 .lightTheme {
@@ -24,7 +25,7 @@ html,
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Roboto', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
     color: var(--black);
 }
 
@@ -32,43 +33,6 @@ body {
     background: var(--blue);
 }
 
-@font-face {
-    font-family: morganite;
-    src: url(./fonts/Morganite-Medium.ttf);
-}
-@font-face {
-    font-family: morganite;
-    src: url(./fonts/Morganite-Bold.ttf);
-    font-weight: bold;
-}
-@font-face {
-    font-family: Grifter;
-    src: url(./fonts/GRIFTER™+Bold.otf);
-}
-@font-face {
-    font-family: 'Tommy Outline';
-    src: url(./fonts/MADE\ TOMMY\ Regular\ Outline.otf);
-}
-@font-face {
-    font-family: 'Tommy Outline';
-    src: url(./fonts/MADE\ TOMMY\ ExtraBold\ Outline.otf);
-    font-weight: bolder;
-}
-
-@font-face {
-    font-family: Tommy;
-    src: url(./fonts/MADE\ TOMMY\ Regular.otf);
-}
-@font-face {
-    font-family: Tommy;
-    src: url(./fonts/MADE\ TOMMY\ Bold.otf);
-    font-weight: bold;
-}
-@font-face {
-    font-family: Tommy;
-    src: url(./fonts/MADE\ TOMMY\ ExtraBold.otf);
-    font-weight: bolder;
-}
 @media screen and (min-width: 320px) {
     html {
         font-size: calc(

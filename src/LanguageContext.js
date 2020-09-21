@@ -23,7 +23,8 @@ export const languages = {
             We offer metalworking in such material capabilities as steel, stainless steel, aluminum, copper, bronze, brass, plastic, etc.
             If You'd like to know more about what our company can do for You, please don't hesitate to contact us.`,
             subtitle:
-                'We have over fifteen years of experience in metalworking and it allows us to promise our clients high precision in manufacturing of details. We use modern technology for metal cutting, to ensure the highest quality, on modern CNC machines.',
+                'We have over fifteen years of experience in metalworking and it allows us to promise our clients high precision in manufacturing of details. \n We use modern technology for metal cutting, to ensure the highest quality, on modern CNC machines.',
+                
         },
 
         contact: {

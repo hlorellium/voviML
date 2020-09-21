@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { GalleryGrid } from '../styled-components';
 import photo_0 from '../media/gallery/0.jpg';
 import photo_1 from '../media/gallery/1.jpg';
@@ -8,8 +8,6 @@ import photo_4 from '../media/gallery/4.jpg';
 import photo_5 from '../media/gallery/5.jpg';
 
 export const Gallery = ({ data, setCurrentPage }) => {
-    // eslint-disable-next-line
-    // useEffect(() => setCurrentPage(data.menu.gallery), [data.menu.gallery]);
 
     return (
         <GalleryGrid>

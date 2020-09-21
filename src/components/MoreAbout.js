@@ -9,6 +9,10 @@ export const MoreAbout = ({ data, setCurrentPage }) => {
 
     return (
         <MoreAboutStyles>
+            <div>
+                <h1>About</h1>
+                
+            </div>
             <Tools data={data} />
             <Gallery data={data} />
         </MoreAboutStyles>
