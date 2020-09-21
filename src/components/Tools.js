@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { ToolsStyles, ToolCard } from '../styled-components';
 import pumaPhoto from '../media/puma_230.jpg';
 import lynxPhoto from '../media/lynx-220-01.jpg';

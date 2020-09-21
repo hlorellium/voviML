@@ -10,7 +10,6 @@ import {
     Wrapper,
     Background,
     BlueBg,
-    CurrentPage,
     DarkBg,
 } from './styled-components';
 
