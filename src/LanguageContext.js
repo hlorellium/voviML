@@ -20,7 +20,8 @@ export const languages = {
             cta: 'Contact Us',
             cta2: 'About Us',
             tools: 'The machines we use',
-            toolsSub: 'We use modern technology for metal cutting, to ensure the highest quality, on modern CNC machines.',
+            toolsSub:
+                'We use modern technology for metal cutting, to ensure the highest quality, on modern CNC machines.',
             text: `All our metalworking is done individually in prototypes, single quantities, and mass production, based on customer requirements. 
             We offer metalworking in such material capabilities as steel, stainless steel, aluminum, copper, bronze, brass, plastic, etc.`,
             subtitle:
@@ -57,18 +58,16 @@ export const languages = {
         about: {
             above: 'VoviML Est. 1996',
             about: 'Umbes',
-portfolio: 'Portfell',
+            portfolio: 'Portfell',
             header: 'Loome ',
             detail: 'detaili',
             cta: 'Võta meiega ühendust',
             cta2: 'Meist',
             tools: 'Meie masinad',
-            toolsSub: 'Kõrgema kvaliteedi tagamiseks kasutame kaasaegsetes CNC-masinates metalli lõikamiseks kaasaegset tehnoloogiat.',
+            toolsSub:
+                'Kõrgema kvaliteedi tagamiseks kasutame kaasaegsetes CNC-masinates metalli lõikamiseks kaasaegset tehnoloogiat.',
 
-            text: `Osaühing VoviML on asutatud septembris 1996.a. Tartus. Alates oktoober 2004.a.  on  põhitegevusalaks  metallitöötlemine. 
-            Meie pikaaegsed kogemused metallitööde vallas lubavad oma  klientidele pakkuda kõrge täpsusega detaile kaasaegsetel  CNC-treimispingil.
-            Valmistame tooteid üksiktellimusena kui ka suurte sarjadena vastavalt kliendi poolt ette antud joonistele.
-            Meil on kogemus erinevate materjalide töötlemisel:  roostevaba teras, pronks, plastid, alumiinium jne.`,
+            text: `Kogu meie metallitöötlus toimub individuaalselt prototüüpide, üksikute koguste ja masstoodanguna, lähtudes kliendi nõudmistest. Pakume metallitöötlust selliste materjalide osas nagu teras, roostevaba teras, alumiinium, vask, pronks, messing, plastik jne.`,
             subtitle: `Osaühing VoviML on asutatud septembris 1996.a. Tartus. Alates oktoober 2004.a.  on  põhitegevusalaks  metallitöötlemine. 
                 Meie pikaaegsed kogemused metallitööde vallas lubavad oma  klientidele pakkuda kõrge täpsusega detaile kaasaegsetel  CNC-treimispingil.`,
             your: ['teie', 'töökindel', 'kvaliteeti'],
