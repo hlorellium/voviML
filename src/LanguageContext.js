@@ -63,7 +63,7 @@ export const languages = {
             detail: 'detaili',
             cta: 'Võta meiega ühendust',
             cta2: 'Meist',
-            tools: 'Meie masinad',
+            tools: 'Meie tööpingid',
             toolsSub:
                 'Kõrgema kvaliteedi tagamiseks kasutame kaasaegsetes CNC-masinates metalli lõikamiseks kaasaegset tehnoloogiat.',
 
