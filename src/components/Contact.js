@@ -24,10 +24,9 @@ export const Contact = ({ data, setCurrentPage }) => {
                 <div className="contacts">
                     <p>
                         {data.contact.phone}: <span>+37253450405</span> <br />{' '}
-                        {data.contact.fax}: <span>+3727304202</span>
                     </p>
                     <p>
-                        {data.contact.mail}: <span>voviml(ät)hot.ee</span>{' '}
+                        {data.contact.mail}: <span>vovimlou@gmail.com</span>{' '}
                         <br /> {data.contact.web}: <span>www.voviml.eu</span>
                     </p>
                 </div>
