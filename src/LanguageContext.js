@@ -70,7 +70,7 @@ export const languages = {
             text: `Kogu meie metallitöötlus toimub individuaalselt prototüüpide, üksikute koguste ja masstoodanguna, lähtudes kliendi soovist.Pakume metallitöötlust selliste materjalide osas nagu teras, roostevaba teras, alumiinium, vask, pronks, messing, plastik jne.`,
             subtitle: `Osaühing VoviML on asutatud septembris 1996.a. Tartus. Alates oktoober 2004.a.  on  põhitegevusalaks  metallitöötlemine. 
                 Meie pikaaegsed kogemused metallitööde vallas lubavad oma  klientidele pakkuda kõrge täpsusega detaile kaasaegsetel  CNC-treimispingil.`,
-            your: ['teie', 'töökindel', 'kvaliteeti'],
+            your: ['Teile', 'töökindel', 'Kvaliteet'],
         },
         contact: {
             adress: 'Aadress',
