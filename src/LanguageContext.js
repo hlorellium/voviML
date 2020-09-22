@@ -59,7 +59,7 @@ export const languages = {
             above: 'VoviML Est. 1996',
             about: 'Ettevõttest',
             portfolio: 'Portfell',
-            header: 'Loome ',
+            header: 'Toodame ',
             detail: 'detaili',
             cta: 'Võta meiega ühendust',
             cta2: 'Meist',
