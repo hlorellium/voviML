@@ -7,11 +7,11 @@ import photo_3 from '../media/gallery/3.jpg';
 import photo_4 from '../media/gallery/4.jpg';
 import photo_5 from '../media/gallery/5.jpg';
 
-export const Gallery = ({ data, setCurrentPage }) => {
+export const Gallery = ({ data }) => {
 
     return (
         <GalleryGrid>
-            <h1>Portfolio</h1>
+            <h1>{data.about.portfolio}</h1>
             <div>
                 <img src={photo_0} id="photo_0" alt="Detail" />
                 <img src={photo_1} id="photo_1" alt="Detail" />

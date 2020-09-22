@@ -10,12 +10,10 @@ export const MoreAbout = ({ data, setCurrentPage }) => {
 
     return (
         <MoreAboutStyles>
-            <div class="aboutBlock">
+            <div className="aboutBlock">
                 <div>
-                    <h1>About</h1>
-                    <p>
-{data.about.text}
-                    </p>
+                    <h1>{data.about.about}</h1>
+                    <p>{data.about.text}</p>
                 </div>
                 <img src={AboutPhoto} alt="Tokar"></img>
             </div>

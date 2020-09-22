@@ -11,7 +11,7 @@ export const Switcher = ({
         localStorage.getItem('lightTheme') === 'true'
             ? setIsLightTheme(true)
             : setIsLightTheme(false);
-    });
+    }, [setIsLightTheme]);
     return (
         <SwitchButtonStyles isLightTheme={isLightTheme}>
             <ul>

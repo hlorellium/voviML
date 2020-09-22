@@ -11,6 +11,18 @@ export const Wrapper = styled.div`
     gap: 0px 20px;
     overflow-x: hidden;
     overflow-y: auto;
+    a,
+    a:active,
+    a:focus {
+        outline: none;
+    }
+
+    button,
+    button:active,
+    button:focus {
+        outline: none;
+    }
+
     @media (max-width: 1024px) {
         grid-template-columns: 0.1fr 1.6fr repeat(2, 1.6fr) 0.1fr;
     }
@@ -52,7 +64,7 @@ export const NavbarStyles = styled.ul`
     li {
         position: relative;
         margin: 0;
-        opacity: 0.75;
+        opacity: 0.8;
         transition: all 0.3s ease-in-out 0s;
     }
     li:hover {
@@ -152,7 +164,7 @@ export const HamburgerMenu = styled.div`
     .activity {
         opacity: 1;
     }
- 
+
     li {
         position: relative;
         margin: 0;
@@ -273,83 +285,12 @@ export const AboutStyles = styled.div`
     }
     @media (max-width: 900px) {
         .subtitle p {
-        font-size: 1.4em;
+            font-size: 1.4em;
         }
-    
     }
     @media (max-width: 400px) {
         .header h1 {
             font-size: 4em;
-        }
-
-    }
-`;
-
-export const ToolsStyles = styled.div`
-    display: flex;
-    flex-direction: column;
-    margin-top: 5vh;
-
-    .tools {
-        display: flex;
-        justify-content: space-evenly;
-    }
-    @media (max-width: 900px) {
-        .tools {
-            flex-direction: column;
-        }
-    }
-`;
-
-export const ToolCard = styled.div`
-    padding: 40px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.13);
-    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-    width: min(400px, 70%);
-    height: 500px;
-    margin: 0 25px;
-    background-color: #fff;
-    color: #000;
-    img {
-        width: max(200px, 80%);
-        height: auto;
-    }
-    :hover {
-        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.13),
-            0 10px 10px rgba(0, 0, 0, 0.13);
-    }
-    @media (max-width: 900px) {
-        flex-direction: column;
-        margin: 0 5px;
-        padding: 30px;
-        img {
-            width: 90%;
-        }
-    }
-`;
-
-export const GalleryGrid = styled.div`
-    margin-top: 5vh;
-    div {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(150px, 400px));
-        grid-gap: 10px;
-
-        max-width: 100%;
-        img {
-            object-fit: cover;
-            width: 100%;
-            max-height: 100%;
-        }
-    }
-
-    @media (max-width: 1100px) {
-        div {
-            grid-template-columns: repeat(auto-fill, minmax(200px, 300px));
         }
     }
 `;
@@ -361,22 +302,20 @@ export const MoreAboutStyles = styled.div`
         font-weight: 600;
         font-size: 1.5em;
     }
-
     .aboutBlock {
         margin-top: 5vh;
         display: flex;
         justify-content: space-between;
         align-items: center;
         h1 {
-            border-bottom: var(--black);
-
+            border-bottom: var(--white);
         }
         p {
-        font-weight: 300;
-            
+            font-weight: 300;
         }
         div {
             margin-right: 5%;
+            width: 50%;
         }
         img {
             object-fit: cover;
@@ -384,13 +323,132 @@ export const MoreAboutStyles = styled.div`
             max-height: 100%;
         }
     }
-    @media(max-width: 1024px) {
+    @media (max-width: 1024px) {
         .aboutBlock {
-            flex-direction: column;
-            img {
-            width: max(300px, 70%);
+            text-align: left;
 
+            flex-direction: column;
+            div {
+                width: auto;
             }
+            img {
+                width: max(300px, 70%);
+            }
+        }
+    }
+`;
+
+export const ToolsStyles = styled.div`
+
+    margin-top: 5vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row-reverse;
+    transition: all 0.3s ease-in-out 0s;
+
+    p {
+        font-weight: 300;
+    }
+    .toolLink {
+        position: relative;
+        cursor: pointer;
+        opacity: 0.5;
+        margin-left: 2.5em;
+    }
+    .lynx,
+    .puma {
+        display: none;
+    }
+    .toolLink::before {
+        content: '';
+        width: 2em;
+        height: 2px;
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
+        left: -2.5em;
+        transform: translate(0, -50%);
+        background-color: var(--white);
+        visibility: hidden;
+        transform: scale(0);
+        transition: all 0.3s ease-in-out 0s;
+    }
+    .toolLink:hover::before {
+        visibility: visible;
+        transform: scale(1);
+    }
+    .activeLink::before {
+        opacity: 1;
+        visibility: visible;
+        transform: scale(1);
+    }
+    .activeLink {
+        opacity: 1;
+    }
+    .toolLink:hover {
+        opacity: 1;
+        transition: all 0.3s ease-in-out 0s;
+    }
+    div {
+        margin-right: 5%;
+        width: 50%;
+    }
+    .tools {
+        display: flex;
+        place-items: center;
+        height: 100%;
+        img {
+            object-fit: cover;
+            height: max(300px, 40vh);
+            max-width: 100%;
+        }
+
+        ${(props) =>
+            props.chosenTool === 'puma'
+                ? '.puma { display: block; opacity: 1; }'
+                : '.lynx { display: block; opacity: 1; }'}
+    }
+    @media (max-width: 1024px) {
+        text-align: left;
+
+        flex-direction: column;
+        div {
+            width: auto;
+        }
+        img {
+            width: max(300px, 70%);
+        }
+    }
+`;
+
+export const GalleryGrid = styled.div`
+    margin-top: 5vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    div {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(100px, 400px));
+        grid-gap: 10px;
+        max-width: 100%;
+        align-items: center;
+        img {
+            object-fit: cover;
+            width: 100%;
+            max-height: 100%;
+        }
+    }
+
+    @media (max-width: 1100px) {
+        div {
+            grid-template-columns: repeat(auto-fill, minmax(100px, 200px));
+        }
+    }
+    @media (max-width: 600px) {
+        div {
+            grid-template-columns: repeat(auto-fill, minmax(100px, 150px));
         }
     }
 `;
