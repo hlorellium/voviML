@@ -326,6 +326,7 @@ export const MoreAboutStyles = styled.div`
     @media (max-width: 1024px) {
         .aboutBlock {
             text-align: left;
+            margin-top: 2vh;
 
             flex-direction: column;
             div {
@@ -409,6 +410,7 @@ export const ToolsStyles = styled.div`
                 : '.lynx { display: block; opacity: 1; }'}
     }
     @media (max-width: 1024px) {
+
         text-align: left;
 
         flex-direction: column;
