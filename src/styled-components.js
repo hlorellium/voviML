@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import bgPhotoLight from './media/geardark.jpg';
+// import bgPhotoLight from './media/geardark.jpg';
 import bgPhoto from './media/gearwide.jpg';
 
 export const Wrapper = styled.div`
@@ -679,13 +679,7 @@ export const Background = styled.div`
     -o-background-size: cover;
     background-size: cover;
     z-index: -2;
-    @media (max-width: 1024px) {
-        background: url(${bgPhotoLight});
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-    }
+
 `;
 export const BlueBg = styled.div`
     grid-area: 1 / 1 / 2 / 6;
