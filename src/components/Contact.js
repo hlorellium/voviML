@@ -40,7 +40,7 @@ export const Contact = ({ data, setCurrentPage }) => {
                     <p>Nõo, Lao 11A, Tartumaa 61601, Estonia </p>
                 </div>
 
-                <div className="map">
+                <div style={{ width: '100%' }} className="map">
                     <GoogleMapReact
                         bootstrapURLKeys={{
                             key: 'AIzaSyAblU3Umy0cY0Dq-WX6yXtXe4sTuqtGzHc',

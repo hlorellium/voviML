@@ -496,6 +496,7 @@ export const ContactsStyles = styled.div`
         flex-direction: row-reverse;
         align-items: center;
         justify-content: space-between;
+        margin-top: 2vh;
     }
 
     p {
@@ -526,7 +527,9 @@ export const ContactsStyles = styled.div`
             margin-left: 10%;
         }
         .map {
-            width: 80%;
+            height: 50vh;
+
+            width: 100%;
             margin: 25px 0px;
         }
         .locationBlock {
