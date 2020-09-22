@@ -37,20 +37,23 @@ export const ContactUsForm = ({ contactUs }) => {
                 message: '',
             }}
             validationSchema={SignupSchema}
-            onSubmit={async (values, {resetForm, setSubmitting, setErrors}) => {
+            onSubmit={async (
+                values,
+                { resetForm, setSubmitting, setErrors }
+            ) => {
                 try {
                     await fetch('/', {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/x-www-form-urlencoded',
                         },
-                        body: encode({ 'form-name': 'contact', ...values }),})
-                        resetForm({})
+                        body: encode({ 'form-name': 'contact', ...values }),
+                    });
+                    resetForm({});
                 } catch (error) {
                     setSubmitting(false);
-                    setErrors({submit: error.message});
-                } 
-                
+                    setErrors({ submit: error.message });
+                }
             }}
         >
             {({ errors, touched, isSubmitting }) => (
@@ -61,7 +64,7 @@ export const ContactUsForm = ({ contactUs }) => {
 
                         <label className="name-label">
                             <span>{contactUs.labelName}:</span>{' '}
-                            <Field name="name" />
+                            <Field name="name" placeholder={contactUs.labelName} />
                             {errors.name && touched.name ? (
                                 <ErrorDiv>{errors.name}</ErrorDiv>
                             ) : null}
@@ -92,16 +95,11 @@ export const ContactUsForm = ({ contactUs }) => {
                         </label>
                         <label className="message-label">
                             <span>{contactUs.labelMessage}:</span>{' '}
-                            <Field as="textarea" name="message" type="text" />
+                            <Field as="textarea" name="message" type="text" placeholder={contactUs.labelMessage} />
                             {errors.message && touched.message ? (
                                 <ErrorDiv>{errors.message}</ErrorDiv>
                             ) : null}
                         </label>
-
-                        {/* <label className="message-label">
-                            <span>{contactUs.labelMessage}:</span>{' '}
-                            <textarea name="message" required></textarea>
-                        </label> */}
 
                         <button type="submit" disabled={isSubmitting}>
                             {contactUs.button}

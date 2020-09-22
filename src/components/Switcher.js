@@ -18,7 +18,7 @@ export const Switcher = ({
                 <li>
                     {' '}
                     <span class="phoneNumber">
-                        <a href="tel:+79922971903">+37253450405</a>
+                        <a href="tel:+37253450405">+37253450405</a>
                     </span>
                 </li>
                 <li className={currentLanguage === 'en' ? 'selectedLang' : ''}>

@@ -8,9 +8,11 @@
     --white: #ffffff;
     --gray: #f1f6f8;
     --grayish: #dee2e6;
-    --dark-gray: #ced4da;
+    --dark-gray: #b7babd;
+    --bg-gray: #171616;
     --red: #ff6b6b;
     --animate: all 0.2s ease-in-out;
+    
 }
 
 .lightTheme {
@@ -19,6 +21,8 @@
     --gray: #7e7d7d;
     --dark-gray: #454647;
     --grayish: #c5c7c9;
+    --bg-gray: #fff;
+
 }
 
 html,

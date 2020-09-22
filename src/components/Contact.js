@@ -19,17 +19,27 @@ export const Contact = ({ data, setCurrentPage }) => {
     return (
         <ContactsStyles>
             <div>
-                <h3>VoviML OÜ (reg.nr 10125228)</h3>
-                <span className="adress">{data.contact.adress}:</span>
-                <p>Nõo, Lao 11A, Tartumaa 61601, Estonia </p>
-                <p>
-                    {data.contact.phone}: <span>+37253450405</span> <br />{' '}
-                    {data.contact.fax}: <span>+3727304202</span>
-                </p>
-                <p>
-                    {data.contact.mail}: <span>voviml(ät)hot.ee</span> <br />{' '}
-                    {data.contact.web}: <span>www.voviml.eu</span>
-                </p>
+                <h1>{data.menu.contacts}</h1>
+                <span>VoviML OÜ (reg.nr 10125228)</span>
+                <div className="contacts">
+                    <p>
+                        {data.contact.phone}: <span>+37253450405</span> <br />{' '}
+                        {data.contact.fax}: <span>+3727304202</span>
+                    </p>
+                    <p>
+                        {data.contact.mail}: <span>voviml(ät)hot.ee</span>{' '}
+                        <br /> {data.contact.web}: <span>www.voviml.eu</span>
+                    </p>
+                </div>
+            </div>
+
+            <div className="locationBlock">
+                <div className="adress">
+                    <h2>{data.contact.location}</h2>
+
+                    <p>Nõo, Lao 11A, Tartumaa 61601, Estonia </p>
+                </div>
+
                 <div className="map">
                     <GoogleMapReact
                         bootstrapURLKeys={{
@@ -46,7 +56,7 @@ export const Contact = ({ data, setCurrentPage }) => {
                     </GoogleMapReact>
                 </div>
             </div>
-                <ContactUsForm contactUs={data.contact.contactUs} />
+            <ContactUsForm contactUs={data.contact.contactUs} />
         </ContactsStyles>
     );
 };

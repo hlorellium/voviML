@@ -339,7 +339,6 @@ export const MoreAboutStyles = styled.div`
 `;
 
 export const ToolsStyles = styled.div`
-
     margin-top: 5vh;
     display: flex;
     justify-content: space-between;
@@ -454,61 +453,108 @@ export const GalleryGrid = styled.div`
 `;
 
 export const ContactsStyles = styled.div`
-    margin-top: 5vh;
+    margin: 3vh 0;
+    padding: 0;
     font-size: 1em;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    max-width: 1200px;
+
     color: var(--white);
+
+    h1,
+    h2,
+    h3 {
+        font-family: Poppins, sans-serif;
+    }
+    div:first-of-type {
+        span {
+            font-weight: 500;
+        }
+    }
+    .contacts {
+        display: flex;
+        align-items: center;
+
+        p {
+            color: var(--gray);
+            span {
+                color: var(--white);
+                font-weight: 400;
+            }
+        }
+
+        p:last-of-type {
+            margin-left: 20%;
+        }
+    }
     span {
         font-weight: bold;
     }
-
-    p:first-of-type {
-        font-weight: bold;
+    .locationBlock {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: space-between;
     }
+
     p {
         white-space: pre-line;
+        font-weight: 300;
     }
     .map {
-        height: 70%;
-        width: 100%;
-        border: 1px solid var(--black);
+        height: min(500px, 50vh);
+        width: 80%;
         margin: 25px 0px;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.13);
     }
     .adress {
-        color: var(--blue);
+        margin-left: 10%;
     }
     .pin {
         display: flex;
     }
     .pin-text {
         font-size: 1.5em;
+        color: #0b0a0a;
     }
-    @media (max-width: 1100px) {
-        flex-direction: column;
-        align-self: center;
+
+    @media (max-width: 1024px) {
+        .adress {
+            margin-left: 0;
+        }
+        .contacts > p:last-of-type {
+            margin-left: 10%;
+        }
         .map {
-            width: 100%;
-            height: 70vh;
+            width: 80%;
+            margin: 25px 0px;
+        }
+        .locationBlock {
+            text-align: left;
+            align-items: flex-start;
+
+            flex-direction: column;
+            div {
+                width: auto;
+            }
         }
     }
 `;
 
 export const ErrorDiv = styled.div`
-    font-size: 1em;
+    position: absolute;
+    bottom: -0.1em;
+    font-size: 0.8em;
     width: 100%;
-    padding: 5px 0;
+    padding: 0;
     color: var(--red);
 `;
 
 export const FormStyled = styled.div`
-    background-color: var(--datk-gray);
     color: var(--white);
-    width: 40%;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.13);
-
+    width: 50%;
+    align-self: center;
+    margin-top: 5vh;
     form {
         display: flex;
         flex-direction: column;
@@ -516,7 +562,6 @@ export const FormStyled = styled.div`
         align-items: center;
     }
 
-    padding: 10px 60px;
     align-items: center;
     h1 {
         margin: 20px;
@@ -525,43 +570,61 @@ export const FormStyled = styled.div`
     textarea {
         outline: none;
         padding: 10px;
-        font-size: 1em;
-        caret-color: var(--black);
+        font-size: 0.9em;
+        color: var(--white);
+        background-color: var(--bg-gray);
+        caret-color: var(--white);
+        outline: none;
+        border: none;
+        border-bottom: 1px solid var(--dark-gray);
+        transition: border-bottom var(--animate);
     }
     textarea {
         resize: vertical;
-        height: 150px;
+        height: 6em;
     }
-    input:focus,
-    textarea:focus {
-        transition: 0.15s ease-in-out;
-        outline: 2px solid var(--black);
+
+    input::placeholder,
+    textarea::placeholder {
+        color: var(--dark-gray);
+        transition: var(--animate);
+    }
+    input,
+    textarea {
+        border-bottom: 1px solid var(--gray);
+        transition: var(--animate);
+    }
+    input:focus::placeholder,
+    textarea:focus::placeholder {
+        color: var(--gray);
+        transition: var(--animate);
     }
     label {
         display: flex;
         flex-direction: column;
         width: 100%;
         margin: 0;
+        position: relative;
+        padding-bottom: 1em;
     }
     span {
         font-size: 0.6em;
         margin: 15px 0 5px 0;
     }
     button {
-        font-weight: bold;
         font-size: 1em;
         padding: 15px 20px;
         outline: none;
         transition: 0.2s ease-in-out;
         margin: 20px 0 15px 0;
-        border: none;
+        border: 1px solid var(--white);
         color: var(--white);
-        background-color: var(--blue);
+        background-color: var(--bg-gray);
         cursor: pointer;
     }
     button:hover {
-        color: var(--white);
-        background-color: var(--black);
+        color: var(--black);
+        background-color: var(--white);
         transition: 0.2s ease-in-out;
     }
     @media (max-width: 1100px) {
@@ -574,7 +637,7 @@ export const FormStyled = styled.div`
             width: 100%;
         }
         width: 90%;
-        padding: 10px 20px;
+        padding: 10px 10px;
     }
 `;
 
@@ -679,7 +742,6 @@ export const Background = styled.div`
     -o-background-size: cover;
     background-size: cover;
     z-index: -2;
-
 `;
 export const BlueBg = styled.div`
     grid-area: 1 / 1 / 2 / 6;

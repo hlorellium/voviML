@@ -33,6 +33,7 @@ export const languages = {
             fax: 'Fax',
             mail: 'Mail',
             web: 'Web',
+            location: 'Location',
             contactUs: {
                 header: 'Contact Us',
                 labelName: 'Your name',
@@ -78,6 +79,8 @@ portfolio: 'Portfell',
             fax: 'Faksimine',
             mail: 'E-post',
             web: 'Web',
+            location: 'Asukoht',
+
             contactUs: {
                 header: 'Võta meiega ühendust',
                 labelName: 'Sinu nimi',
