@@ -47,7 +47,7 @@ export const languages = {
     },
     et: {
         menu: {
-            about: 'Ettevõtest',
+            about: 'Ettevõttest',
             home: 'Avaleht',
 
             tools: 'TÖÖPINGID',
