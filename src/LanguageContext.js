@@ -25,7 +25,7 @@ export const languages = {
             text: `All our metalworking is done individually in prototypes, single quantities, and mass production, based on customer requirements. 
             We offer metalworking in such material capabilities as steel, stainless steel, aluminum, copper, bronze, brass, plastic, etc.`,
             subtitle:
-                'We have over fifteen years of experience in metalworking and it allows us to promise our clients high precision in manufacturing of details. \n We use modern technology for metal cutting, to ensure the highest quality, on modern CNC machines.',
+                'We have over fifteen years of experience in metalworking and it allows us to promise our clients high precision in manufacturing of details. ',
         },
 
         contact: {
@@ -69,7 +69,7 @@ export const languages = {
             text: `Вся наша металлообработка выполняется индивидуально, в виде прототипов, единичных партий или серийного производства, в соответствии с требованиями заказчика.
             Мы предлагаем услуги металлообработки для таких материалов, как сталь, нержавеющая сталь, алюминий, медь, бронза, латунь, пластик и др.`,
             subtitle:
-                'Мы обладаем более чем пятнадцатилетним опытом в области металлообработки, что позволяет нам обещать нашим клиентам высокую точность изготовления деталей. \n Мы используем современные технологии для резки металла на современных станках с ЧПУ, чтобы обеспечить высочайшее качество.',
+                'Мы обладаем более чем пятнадцатилетним опытом в области металлообработки, что позволяет нам обещать нашим клиентам высокую точность изготовления деталей.',
         },
 
         contact: {
@@ -111,11 +111,12 @@ export const languages = {
             toolsSub:
                 'Kõrgema kvaliteedi tagamiseks kasutame kaasaegsetes CNC-masinates metalli lõikamiseks kaasaegset tehnoloogiat.',
 
-            text: `Kogu meie metallitöötlus toimub individuaalselt prototüüpide, üksikute koguste ja masstoodanguna, lähtudes kliendi soovist.Pakume metallitöötlust selliste materjalide osas nagu teras, roostevaba teras, alumiinium, vask, pronks, messing, plastik jne.`,
+            text: `Kogu meie metallitöötlus  toimub individuaalselt prototüüpide, üksikute koguste ja masstoodanguna, lähtudes kliendi soovist.Pakume metallitöötlust selliste materjalide osas nagu teras, roostevaba teras, alumiinium, vask, pronks, messing, plastik jne.`,
             subtitle: `Osaühing VoviML on asutatud septembris 1996.a. Tartus. Alates oktoober 2004.a.  on  põhitegevusalaks  metallitöötlemine. 
-                Meie pikaaegsed kogemused metallitööde vallas lubavad oma  klientidele pakkuda kõrge täpsusega detaile kaasaegsetel  CNC-treimispingil.`,
+ `,
             your: ['Teile', 'töökindel', 'Kvaliteet'],
         },
+        //               Meie pikaaegsed kogemused metallitööde vallas lubavad oma  klientidele pakkuda kõrge täpsusega detaile kaasaegsetel  CNC-treimispingil.
         contact: {
             adress: 'Aadress',
             phone: 'Telefon',
