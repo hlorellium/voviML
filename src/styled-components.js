@@ -679,6 +679,7 @@ export const SwitchButtonStyles = styled.div`
     align-items: center;
     justify-content: flex-end;
     font-weight: 300;
+    font-size: 0.8em;
     ul {
         list-style: none;
         display: flex;
