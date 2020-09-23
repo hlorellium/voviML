@@ -297,6 +297,7 @@ export const AboutStyles = styled.div`
 
 export const MoreAboutStyles = styled.div`
     color: var(--white);
+
     h1 {
         font-family: Poppins, sans-serif;
         font-weight: 600;
@@ -322,6 +323,32 @@ export const MoreAboutStyles = styled.div`
             width: max(400px, 50%);
             max-height: 100%;
         }
+    }
+    .contactLink {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    button {
+        font-size: 1em;
+        padding: 15px 20px;
+        outline: none;
+        transition: 0.2s ease-in-out;
+        margin: 20px 0 15px 0;
+        border: 1px solid var(--white);
+        color: var(--white);
+        background-color: var(--bg-gray);
+        cursor: pointer;
+    }
+    a {
+        text-decoration: none;
+    }
+
+
+    button:hover {
+        color: var(--black);
+        background-color: var(--white);
+        transition: 0.2s ease-in-out;
     }
     @media (max-width: 1024px) {
         .aboutBlock {

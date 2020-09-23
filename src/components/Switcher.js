@@ -43,6 +43,17 @@ export const Switcher = ({
                         ET
                     </span>
                 </li>
+                <li className={currentLanguage === 'ru' ? 'selectedLang' : ''}>
+                    {' '}
+                    <span
+                        onClick={() => {
+                            localStorage.setItem('currentLanguage', 'ru');
+                            setCurrentLanguage('ru');
+                        }}
+                    >
+                        RU
+                    </span>
+                </li>
                 <li>
                     {' '}
                     <svg
