@@ -2,19 +2,20 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { AboutStyles } from '../styled-components';
 
-export const About = ({ setCurrentPage, data }) => {
+export const About = ({ setCurrentPage, data, currentLanguage }) => {
     // eslint-disable-next-line
     useEffect(() => setCurrentPage(''), [data.menu.about]);
     const [epithet, setEpithet] = useState(data.about.your[0]);
     useEffect(() => {
         let i = 0;
+        setEpithet(data.about.your[i]);
         const interval = setInterval(() => {
-            setEpithet(data.about.your[i]);
             i++;
             if (i === data.about.your.length) i = 0;
+            setEpithet(data.about.your[i]);
         }, 3000);
         return () => clearInterval(interval);
-    }, [data.about]);
+    }, [data.about, currentLanguage]);
     return (
         <AboutStyles
             textColor={epithet === data.about.your[0] ? 'red' : 'blue'}

@@ -4,11 +4,11 @@ import { About } from './About';
 import { Contact } from './Contact';
 import { MoreAbout } from './MoreAbout';
 
-export const SwitchComponent = ({ data, setCurrentPage }) => {
+export const SwitchComponent = ({ data, setCurrentPage, currentLanguage }) => {
     return (
         <Switch>
             <Route exact path="/">
-                <About data={data} setCurrentPage={setCurrentPage} />
+                <About data={data} setCurrentPage={setCurrentPage} currentLanguage={currentLanguage} />
             </Route>
  
             <Route exact path="/about">

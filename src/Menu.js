@@ -47,6 +47,7 @@ const [isLightTheme, setIsLightTheme] = useState(false);
                     <SwitchComponent
                         data={data}
                         setCurrentPage={setCurrentPage}
+                        currentLanguage={currentLanguage}
                     />
                 </MainContainer>
             </Wrapper>

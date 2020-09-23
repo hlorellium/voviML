@@ -50,7 +50,7 @@ export const languages = {
             about: 'О компании',
 
             tools: 'Станки',
-            home: 'Домашняя страница',
+            home: 'Главная',
             gallery: 'Галлерея',
             contacts: 'Контакты',
         },
