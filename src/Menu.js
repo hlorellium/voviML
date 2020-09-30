@@ -29,7 +29,6 @@ export const Menu = () => {
     );
 const [isLightTheme, setIsLightTheme] = useState(false);
     const [currentPage, setCurrentPage] = useState('');
-    console.log(data);
     return (
         <Router>
             <Wrapper className={isLightTheme ? "lightTheme" : ""}>
