@@ -22,11 +22,23 @@ export const Contact = ({ data, setCurrentPage }) => {
                 <span>VoviML OÜ (reg.nr 10125228)</span>
                 <div className="contacts">
                     <p>
-                        {data.contact.phone}: <span>+37253450405</span> <br />{' '}
+                        {data.contact.phone}:{' '}
+                        <span>
+                            <a href="tel:+37253450405">+37253450405</a>{' '}
+                        </span>
+                        <br />{' '}
                     </p>
                     <p>
-                        {data.contact.mail}: <span>vovimlou@gmail.com</span>{' '}
-                        <br /> {data.contact.web}: <span>www.voviml.eu</span>
+                        {data.contact.mail}:{' '}
+                        <span>
+                            <a href="mailto:vovimlou@gmail.com">
+                                vovimlou@gmail.com
+                            </a>
+                        </span>{' '}
+                        <br /> {data.contact.web}:{' '}
+                        <span>
+                            <a href="https://www.voviml.eu">www.voviml.eu</a>
+                        </span>
                     </p>
                 </div>
             </div>

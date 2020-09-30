@@ -245,6 +245,7 @@ export const AboutStyles = styled.div`
         display: flex;
         flex-direction: column;
         font-family: Poppins, sans-serif;
+        line-height: 1.2em;
     }
 
     .changingText {
@@ -256,6 +257,7 @@ export const AboutStyles = styled.div`
         white-space: pre-line;
         color: var(--dark-gray);
         font-weight: 300;
+        line-height: 150%;
     }
     .ctaDiv {
         display: flex;
@@ -490,7 +492,15 @@ export const ContactsStyles = styled.div`
     justify-content: space-between;
 
     color: var(--white);
+    a {
+        text-decoration: none;
+        color: var(--white);
 
+    }
+    a:hover {
+        color: var(--blue);
+        text-decoration: underline;
+    }
     h1,
     h2,
     h3 {

@@ -26,11 +26,7 @@ export const Sidebar = ({ menu }) => {
                 </li>
             </NavbarStyles>
             <HamburgerMenu isOpened={isOpened}>
-                {/* <span onClick={() => setIsOpened((isOpened) => !isOpened)}> */}
-                {/* <svg 
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 640 480"
-                    > */}
+
 
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
