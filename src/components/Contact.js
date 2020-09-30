@@ -7,7 +7,7 @@ import { ContactUsForm } from './ContactUsForm';
 export const Contact = ({ data, setCurrentPage }) => {
     // eslint-disable-next-line
     useEffect(() => setCurrentPage(data.menu.contacts), [data.menu.contacts]);
-
+    console.log(process.env);
     const mapProps = {
         center: {
             lat: 58.268758,
@@ -43,7 +43,7 @@ export const Contact = ({ data, setCurrentPage }) => {
                     <GoogleMapReact
                         bootstrapURLKeys={{
                             // key: 'AIzaSyAblU3Umy0cY0Dq-WX6yXtXe4sTuqtGzHc',
-                            key: process.env.GOOGLE_API,
+                            key: `${process.env.GOOGLE_API}`,
                         }}
                         defaultCenter={mapProps.center}
                         defaultZoom={mapProps.zoom}
