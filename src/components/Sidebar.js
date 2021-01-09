@@ -42,8 +42,8 @@ export const Sidebar = ({ menu }) => {
                             transform="translate(-77.1 296.11) rotate(-45)"
                             fill="#fff"
                             stroke="#fff"
-                            stroke-miterlimit="10"
-                            stroke-width="5"
+                            strokeMiterlimit="10"
+                            strokeWidth="5"
                         />
                         <rect
                             x="147.87"
@@ -53,8 +53,8 @@ export const Sidebar = ({ menu }) => {
                             transform="translate(262.78 -154.4) rotate(45)"
                             fill="#fff"
                             stroke="#fff"
-                            stroke-miterlimit="10"
-                            stroke-width="5"
+                            strokeMiterlimit="10"
+                            strokeWidth="5"
                         />
                     </g>
                     <g id="Burger">
@@ -65,8 +65,8 @@ export const Sidebar = ({ menu }) => {
                             height="20"
                             fill="#fff"
                             stroke="#fff"
-                            stroke-miterlimit="10"
-                            stroke-width="5"
+                            strokeMiterlimit="10"
+                            strokeWidth="5"
                         />
                         <rect
                             x="165.68"
@@ -75,8 +75,8 @@ export const Sidebar = ({ menu }) => {
                             height="20"
                             fill="#fff"
                             stroke="#fff"
-                            stroke-miterlimit="10"
-                            stroke-width="5"
+                            strokeMiterlimit="10"
+                            strokeWidth="5"
                         />
                         <rect
                             x="165.68"
@@ -85,8 +85,8 @@ export const Sidebar = ({ menu }) => {
                             height="20"
                             fill="#fff"
                             stroke="#fff"
-                            stroke-miterlimit="10"
-                            stroke-width="5"
+                            strokeMiterlimit="10"
+                            strokeWidth="5"
                         />
                     </g>
                 </svg>

@@ -1,5 +1,6 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import GoogleMapReact from 'google-map-react';
+import mapboxgl from 'mapbox-gl';
 import { ContactsStyles } from '../styled-components';
 import { LocationPin } from './LocationPin';
 import { ContactUsForm } from './ContactUsForm';
@@ -7,13 +8,33 @@ import { ContactUsForm } from './ContactUsForm';
 export const Contact = ({ data, setCurrentPage }) => {
     // eslint-disable-next-line
     useEffect(() => setCurrentPage(data.menu.contacts), [data.menu.contacts]);
-    const mapProps = {
-        center: {
-            lat: 58.268758,
-            lng: 26.521602,
-        },
-        zoom: 17,
-    };
+    const [mapProps, setMapProps] = useState({
+        lat: 58.268729,
+        lng: 26.521546,
+        zoom: 16,
+    });
+
+    const mapContainer = useRef();
+    useEffect(() => {
+        mapboxgl.accessToken = process.env.REACT_APP_MAPBOX_ACCESS_TOKEN;
+        const map = new mapboxgl.Map({
+            container: mapContainer.current,
+            style: 'mapbox://styles/mapbox/streets-v11',
+            center: [mapProps.lng, mapProps.lat],
+            zoom: mapProps.zoom,
+        });
+
+        const marker = new mapboxgl.Marker(mapContainer)
+            .setLngLat([mapProps.lng, mapProps.lat])
+            .addTo(map);
+
+    }, []);
+    // const mapProps = {
+    //     center: {
+
+    //     },
+
+    // };
 
     return (
         <ContactsStyles>
@@ -50,20 +71,8 @@ export const Contact = ({ data, setCurrentPage }) => {
                     <p>Nõo, Lao 11A, Tartumaa 61601, Estonia </p>
                 </div>
 
-                <div style={{ width: '100%' }} className="map">
-                    <GoogleMapReact
-                        bootstrapURLKeys={{
-                            key: process.env.REACT_APP_GOGLE_API,
-                        }}
-                        defaultCenter={mapProps.center}
-                        defaultZoom={mapProps.zoom}
-                    >
-                        <LocationPin
-                            lat={58.268758}
-                            lng={26.521602}
-                            text="Nõo, Lao 11A"
-                        />
-                    </GoogleMapReact>
+                <div  className="map">
+                    <div ref={mapContainer} className="mapContainer" />
                 </div>
             </div>
             <ContactUsForm contactUs={data.contact.contactUs} />

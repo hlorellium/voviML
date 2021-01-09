@@ -346,7 +346,6 @@ export const MoreAboutStyles = styled.div`
         text-decoration: none;
     }
 
-
     button:hover {
         color: var(--black);
         background-color: var(--white);
@@ -439,7 +438,6 @@ export const ToolsStyles = styled.div`
                 : '.lynx { display: block; opacity: 1; }'}
     }
     @media (max-width: 1024px) {
-
         text-align: left;
 
         flex-direction: column;
@@ -495,7 +493,6 @@ export const ContactsStyles = styled.div`
     a {
         text-decoration: none;
         color: var(--white);
-
     }
     a:hover {
         color: var(--blue);
@@ -557,6 +554,25 @@ export const ContactsStyles = styled.div`
         font-size: 1.5em;
         color: #0b0a0a;
     }
+    .mapboxgl-canvas-container {
+        height: 100%;
+    }
+    .mapContainer {
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+        button {
+            display: none;
+        }
+        a {
+            font-size: 0.5rem;
+        }
+        .mapboxgl-control-container {
+            display: none;
+        }
+    }
+
+
 
     @media (max-width: 1024px) {
         .adress {
