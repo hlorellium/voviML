@@ -1,8 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
-import GoogleMapReact from 'google-map-react';
 import mapboxgl from 'mapbox-gl';
 import { ContactsStyles } from '../styled-components';
-import { LocationPin } from './LocationPin';
 import { ContactUsForm } from './ContactUsForm';
 
 export const Contact = ({ data, setCurrentPage }) => {
@@ -24,11 +22,11 @@ export const Contact = ({ data, setCurrentPage }) => {
             zoom: mapProps.zoom,
         });
 
-        const marker = new mapboxgl.Marker(mapContainer)
+        new mapboxgl.Marker(mapContainer)
             .setLngLat([mapProps.lng, mapProps.lat])
             .addTo(map);
 
-    }, []);
+    }, [mapProps.lng, mapProps.lat, mapProps.zoom]);
     // const mapProps = {
     //     center: {
 
